@@ -1,0 +1,9 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+
+.footer {
+  background-color: lightblue;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
