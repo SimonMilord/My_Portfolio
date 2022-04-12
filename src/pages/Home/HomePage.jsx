@@ -5,7 +5,7 @@ import Hero from '../../components/Hero/hero';
 import About from '../../components/About/about';
 import Projects from '../../components/Projects/projects';
 import Contact from '../../components/Contact/contact';
-import Footer from '../../components/Footer/footer';
+// import Footer from '../../components/Footer/footer';
 import MobileNav from '../../components/MobileNav/mobileNav';
 
 function HomePage(props) {
@@ -16,7 +16,7 @@ function HomePage(props) {
       <About />
       <Projects />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
       <MobileNav />
     </div>
   );

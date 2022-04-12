@@ -2,6 +2,54 @@
 @import '../../styles/partials/variables';
 
 .about {
-  background-color: lightgrey;
   @include paddingsection;
+  @include display-flex(column,center,center);
+  @include desktop {
+    @include display-flex(row,center,center);
+  }
+  .info {
+
+    .infoCard {
+      background-color: lightgray;
+      @include paddingsection;
+      border-radius: 12px;
+      width: 100%;
+      @include desktop {
+        width: 50%;
+      }
+      &__aboutme {
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+        margin: 1rem 0rem;
+        .emoji {
+          height: 16px;
+        }
+      }
+      &__title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        @include tablet {
+          margin-bottom: 2rem;
+        }
+      }
+      &__links {
+        margin: 1rem;
+        @include display-flex(row,center,center);
+        @include tablet {
+          margin: 2rem 0rem 0rem 0rem;
+        }
+      }
+      &__link {
+        @include display-flex(row,center,center);
+        margin: 0rem 0.5rem;
+      }
+      &__img {
+        width: 40px;
+      }
+    }
+  }
+  .skills {
+
+  }
 }

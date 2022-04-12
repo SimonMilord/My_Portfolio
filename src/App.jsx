@@ -1,6 +1,6 @@
 import "./App.scss";
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/Home/HomePage";
 
 function App() {
@@ -8,10 +8,43 @@ function App() {
     <>
       <Router>
         <div className="App">
-          <Routes>
-            <Route path="/" exact element={<HomePage />} />
-            <Route path="*" element={<HomePage />} />
-          </Routes>
+          <Switch>
+            <Route
+              path="/"
+              exact
+              render={(routerProps) => <HomePage {...routerProps} />}
+            />
+            <Route
+              path="/github"
+              component={() => {
+                window.location.replace("https://github.com/SimonMilord");
+                return null;
+              }}
+            />
+            <Route
+              path="/linkedin"
+              component={() => {
+                window.location.replace(
+                  "https://www.linkedin.com/in/simonmilord/"
+                );
+                return null;
+              }}
+            />
+            <Route
+              path="/twitter"
+              component={() => {
+                window.location.replace(
+                  "https://twitter.com/SimonMilord"
+                );
+                return null;
+              }}
+            />
+            <Route
+              path="*"
+              exact
+              render={(routerProps) => <HomePage {...routerProps} />}
+            />
+          </Switch>
         </div>
       </Router>
     </>
