@@ -6,7 +6,8 @@
   @include display-flex(row,space-between,center);
   border-bottom: 1px solid black; // to remove later
   .logo {
-
+    font-size: 20px;
+    font-weight: 500;
   }
   &-right {
     @include display-flex(row,center,center);
@@ -23,6 +24,10 @@
       }
       &__link {
         text-decoration: none;
+        color: black;
+        &:hover {
+          border-bottom: 2px solid black;
+        }
       }
     }
     .themeIcon {

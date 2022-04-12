@@ -4,7 +4,7 @@
 .footer {
   @include paddingsection;
   background-color: lightblue;
-  position: absolute;
+  position: relative;
   width: 100%;
   bottom: 4rem;
   @include tablet {

@@ -5,18 +5,16 @@
   @include paddingsection;
   @include display-flex(column,center,center);
   @include desktop {
-    @include display-flex(row,center,center);
+    @include display-flex(row,space-between,center);
   }
   .info {
-
+    width: 100%;
+    @include desktop {
+      width: 50%;
+    }
     .infoCard {
-      background-color: lightgray;
       @include paddingsection;
-      border-radius: 12px;
-      width: 100%;
-      @include desktop {
-        width: 50%;
-      }
+
       &__aboutme {
         font-size: 1.1rem;
         line-height: 1.4rem;
@@ -50,6 +48,17 @@
     }
   }
   .skills {
+    @include paddingsection;
+    @include display-flex(column,center,center);
+    width: 100%;
+    @include desktop {
+      width: 50%;
+    }
 
+    ul {
+      li {
+        @include display-flex(row,center,center);
+      }
+    }
   }
 }

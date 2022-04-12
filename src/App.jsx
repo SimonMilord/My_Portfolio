@@ -2,6 +2,7 @@ import "./App.scss";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/Home/HomePage";
+import Footer from "./components/Footer/footer";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      <Footer />
     </>
   );
 }
