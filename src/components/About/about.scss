@@ -2,6 +2,7 @@
 @import '../../styles/partials/variables';
 
 .about {
+  height: 100vh;
   @include paddingsection;
   @include display-flex(column,center,center);
   @include desktop {
