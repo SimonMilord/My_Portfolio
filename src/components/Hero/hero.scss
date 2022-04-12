@@ -2,5 +2,6 @@
 @import '../../styles/partials/variables';
 
 .hero {
+  @include paddingsection;
   background-color: orange;
 }

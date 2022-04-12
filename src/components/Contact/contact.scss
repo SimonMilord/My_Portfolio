@@ -2,5 +2,7 @@
 @import '../../styles/partials/variables';
 
 .contact {
+  @include paddingsection;
   background-color: green;
+  height: 100px;
 }

@@ -2,8 +2,12 @@
 @import '../../styles/partials/variables';
 
 .footer {
+  @include paddingsection;
   background-color: lightblue;
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 4rem;
+  @include tablet {
+    bottom: 0;
+  }
 }

@@ -20,3 +20,10 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin paddingsection {
+  padding: 1rem;
+  @include tablet {
+    padding: 2rem;
+  }
+}

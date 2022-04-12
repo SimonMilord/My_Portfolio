@@ -3,4 +3,5 @@
 
 .about {
   background-color: lightgrey;
+  @include paddingsection;
 }

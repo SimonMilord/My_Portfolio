@@ -2,5 +2,33 @@
 @import '../../styles/partials/variables';
 
 .header {
-  background-color: red;
+  @include paddingsection;
+  @include display-flex(row,space-between,center);
+  border-bottom: 1px solid black; // to remove later
+  .logo {
+
+  }
+  &-right {
+    @include display-flex(row,center,center);
+    .nav {
+      display: none;
+      @include tablet {
+        display: flex;
+      }
+      &__list {
+        @include display-flex(row,flex-end,center);
+      }
+      &__item {
+        margin: 0rem 0.5rem;
+      }
+      &__link {
+        text-decoration: none;
+      }
+    }
+    .themeIcon {
+      display: flex;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+  }
 }
