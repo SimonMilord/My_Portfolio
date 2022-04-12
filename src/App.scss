@@ -12,7 +12,11 @@ body {
   font-family: $main-font-regular;
 
   .App {
-    // height: 100vh;
+    height: 100%;
     position: relative;
+    margin-bottom: 4rem;
+    @include tablet {
+      margin-bottom: 0rem;
+    }
   }
 }

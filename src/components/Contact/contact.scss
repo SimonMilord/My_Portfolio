@@ -3,6 +3,45 @@
 
 .contact {
   @include paddingsection;
-  background-color: green;
-  height: 100px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  &-title {
+    @include subtitle;
+    @include display-flex(row,center,center);
+  }
+  .emailForm {
+    @include display-flex(column,center,center);
+    &__input {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      margin: 0.5rem 0rem;
+      font-size: 16px;
+      border: 2px solid black;
+      border-radius: 8px;
+      transition: all 0.3s ease 0s;
+      outline-color: blue;
+      @include tablet {
+        width: 70%;
+      }
+      &:hover {
+        border-color: blue;
+      }
+      &--message {
+        min-height: 200px;
+        resize: none;
+      }
+    }
+    &__btn {
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+      border: none;
+      padding: 0.7rem 2.5rem;
+      &:hover {
+        background-color: blue;
+      }
+    }
+  }
 }

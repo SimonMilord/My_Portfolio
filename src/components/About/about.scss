@@ -14,6 +14,10 @@
     }
     .infoCard {
       @include paddingsection;
+      @include desktop {
+        border: 1px solid black;
+        border-radius: 8px;
+      }
 
       &__aboutme {
         font-size: 1.1rem;
@@ -24,9 +28,7 @@
         }
       }
       &__title {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
+        @include subtitle;
         @include tablet {
           margin-bottom: 2rem;
         }
