@@ -24,16 +24,13 @@
       }
       &__link {
         text-decoration: none;
-        color: black;
         &:hover {
-          border-bottom: 2px solid black;
+          // border-bottom: 2px solid black;
+          transition: 0.3s;
+          font-weight: bold;
+          font-size: 18px;
         }
       }
-    }
-    .themeIcon {
-      display: flex;
-      margin-left: 1rem;
-      cursor: pointer;
     }
   }
 }

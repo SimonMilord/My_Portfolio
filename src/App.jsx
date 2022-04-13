@@ -6,6 +6,7 @@ import Footer from "./components/Footer/footer";
 import MobileNav from "./components/MobileNav/mobileNav";
 
 function App() {
+
   return (
     <>
       <Router>

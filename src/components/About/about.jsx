@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./about.scss";
-import LinkedIn from "../../assets/logo/linkedin.png";
-import Github from "../../assets/logo/github.png";
-import Twitter from "../../assets/logo/twitter.png";
-import Email from "../../assets/logo/email.png";
-import Raptors from "../../assets/logo/raptors.png";
-import Habs from "../../assets/logo/canadiens.png";
+import LinkedIn from "../../assets/icons/linkedin.png";
+import Github from "../../assets/icons/github.png";
+import Twitter from "../../assets/icons/twitter.png";
+import Email from "../../assets/icons/email.png";
+import Raptors from "../../assets/icons/raptors.png";
+import Habs from "../../assets/icons/canadiens.png";
 
 export default function About(props) {
 

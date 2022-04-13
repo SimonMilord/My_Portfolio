@@ -3,7 +3,7 @@
 
 .hero {
   border: 1px solid black;
-  height: 100vh;
+  height: 92vh;
   @include paddingsection;
   @include display-flex(column,center,center);
   @include tablet {
@@ -12,7 +12,7 @@
 
   &__text {
     width: 100%;
-    @include display-flex(column,center,flex-start);
+    @include display-flex(column,center,center);
     @include tablet {
       width: 45%;
     }
@@ -24,17 +24,21 @@
     h2 {
       font-size: 1.5rem;
       font-weight: bold;
+      // margin: 0 auto;
     }
   }
 
   &__img-box {
-    width: 45%;
+    width: 100%;
+    // width: 45%;
     max-height: 500px;
     position: relative;
     // margin: 0 auto;
+    min-height: 250px;
   }
   &__img {
     width: 100%;
     max-height: 400px;
+    min-height: 250px;
   }
 }

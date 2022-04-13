@@ -20,3 +20,21 @@ body {
     }
   }
 }
+
+body.light {
+  transition: 0.3s;
+  background-color: $lm-background-color;
+  color: $lm-font-color;
+  a {
+    color: $lm-font-color;
+  }
+}
+
+body.dark {
+  transition: 0.3s;
+  background-color: $dm-background-color;
+  color: $dm-font-color;
+  a {
+    color: $dm-font-color;
+  }
+}

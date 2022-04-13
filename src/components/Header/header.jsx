@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./header.scss";
 import { Link } from "react-router-dom";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import LightModeIcon from "@mui/icons-material/LightMode";
+// import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+// import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkMode from "../Themes/darkMode";
 
 export default function Header(props) {
-  const [currentTheme, setcurrentTheme] = useState("light");
+  // const [currentTheme, setcurrentTheme] = useState("light");
 
   return (
     <div className="header">
@@ -30,21 +31,8 @@ export default function Header(props) {
             </li>
           </ul>
         </nav>
-        <div
-          className="themeIcon"
-          onClick={() => {
-            currentTheme === "dark"
-              ? setcurrentTheme("light")
-              : setcurrentTheme("dark");
-          }}
-        >
-          {currentTheme === "dark" ? (
-            <DarkModeOutlinedIcon fontSize="large" />
-          ) : (
-            <LightModeIcon fontSize="large" />
-          )}
+        <DarkMode />
         </div>
       </div>
-    </div>
   );
 }
