@@ -1,5 +1,10 @@
 @use "./fonts" as*;
 
+// width dimensions
+$wrapper: 1280px;
+$tablet-width: 768px;
+$desktop-width: 1280px;
+
 // fonts variables
 $main-font-regular: "Roboto", sans-serif;
 

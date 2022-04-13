@@ -33,3 +33,8 @@
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+
+@mixin wrapper {
+  max-width: $wrapper;
+  margin: 0 auto;
+}

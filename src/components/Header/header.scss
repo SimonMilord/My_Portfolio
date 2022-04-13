@@ -2,9 +2,9 @@
 @import '../../styles/partials/variables';
 
 .header {
+  @include wrapper;
   @include paddingsection;
   @include display-flex(row,space-between,center);
-  border-bottom: 1px solid black; // to remove later
   .logo {
     font-size: 20px;
     font-weight: 500;

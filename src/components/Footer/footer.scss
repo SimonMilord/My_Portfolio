@@ -2,12 +2,44 @@
 @import '../../styles/partials/variables';
 
 .footer {
+  @include wrapper;
   @include paddingsection;
-  background-color: lightblue;
+  @include display-flex(column,space-between,center);
   position: relative;
   width: 100%;
   bottom: 4rem;
   @include tablet {
     bottom: 0rem;
+  }
+  &__top {
+    width: 100%;
+  }
+  &__bottom {
+    @include display-flex(row,space-between,center);
+    width: 100%;
+  }
+  &__name {
+    @include subtitle;
+    margin-bottom: 1rem;
+    width: 100%;
+    @include tablet {
+      font-size: 40px;
+    }
+  }
+  &__copyright {
+    font-size: 14px;
+  }
+
+  &__topBtn {
+    @include display-flex(row,center,center);
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    &:hover {
+      background-color: lightgray;
+    }
   }
 }

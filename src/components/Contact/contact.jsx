@@ -43,7 +43,7 @@ export default function Contact() {
 
   return (
     <div className="contact">
-      <h2 className="contact-title">Get in touch</h2>
+      <h2 className="contact-title">Let's get in touch!</h2>
       <form className="emailForm" ref={form} onSubmit={sendEmail}>
         {missingInfo && <span className="emailForm__span--error">Please fill all fields before submitting</span>}
         <input

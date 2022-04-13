@@ -2,14 +2,17 @@
 @import '../../styles/partials/variables';
 
 .contact {
+  @include wrapper;
   height: 100vh;
   @include paddingsection;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
   @include display-flex(column,center,center);
   &-title {
     @include subtitle;
+    font-size: 32px;
     @include display-flex(row,center,center);
+    @include tablet {
+      font-size: 40px;
+    }
   }
   .emailForm {
     width: 100%;
@@ -52,14 +55,14 @@
     &__btn {
       border-radius: 8px;
       cursor: pointer;
-      background-color: black;
+      background-color: blue;
       color: white;
       font-size: 16px;
       border: none;
       padding: 0.7rem 2.5rem;
       margin: 1rem 0rem;
       &:hover {
-        background-color: blue;
+        background-color: hotpink;
       }
     }
   }
