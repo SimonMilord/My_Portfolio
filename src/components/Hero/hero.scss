@@ -13,9 +13,9 @@
   &__text {
     width: 100%;
     @include display-flex(column,center,center);
-    @include tablet {
-      width: 45%;
-    }
+    // @include tablet {
+    //   width: 45%;
+    // }
     h1 {
       font-size: 3rem;
       font-weight: bold;

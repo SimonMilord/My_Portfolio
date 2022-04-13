@@ -2,15 +2,18 @@
 @import '../../styles/partials/variables';
 
 .contact {
-  // height: 100vh;
+  height: 100vh;
   @include paddingsection;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  @include display-flex(column,center,center);
   &-title {
     @include subtitle;
     @include display-flex(row,center,center);
   }
   .emailForm {
+    width: 100%;
+    max-width: 1280px;
     @include display-flex(column,center,center);
     &__input {
       width: 100%;

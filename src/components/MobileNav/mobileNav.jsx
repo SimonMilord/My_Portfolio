@@ -6,11 +6,17 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import PersonIcon from '@mui/icons-material/Person';
 
 export default function MobileNav(props) {
-  let theme = "light";
+  // let theme = "light";
+  let [theme, setTheme] = useState('light');
   useEffect(() => {
-    theme = localStorage.getItem('theme');
+    setTheme(localStorage.getItem('theme'));
     console.log(theme);
+  }, [theme])
+
+  window.addEventListener('storage', () => {
+    console.log(JSON.parse(window.localStorage.getItem('theme')));
   })
+
   return (
     <div className={theme === "light" ? "mobileNav" : "mobileNav-dark"}>
       <div className={theme === "light" ? "mobileNav__link" : "mobileNav-dark__link"}>

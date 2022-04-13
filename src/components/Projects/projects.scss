@@ -2,7 +2,7 @@
 @import '../../styles/partials/variables';
 
 .projects {
-  // height: 100vh;
+  height: 100vh;
   @include paddingsection;
   background-color: hotpink;
 }
