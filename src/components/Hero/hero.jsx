@@ -1,6 +1,6 @@
 import React from 'react';
 import './hero.scss';
-import Image from "../../assets/placeholder.svg";
+import Image from "../../assets/images/placeholder.svg";
 
 function hero(props) {
   return (

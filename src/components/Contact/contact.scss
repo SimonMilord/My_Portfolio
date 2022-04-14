@@ -27,6 +27,7 @@
       border-radius: 8px;
       transition: all 0.3s ease 0s;
       outline-color: blue;
+      background-color: $input-bg;
       @include tablet {
         width: 70%;
       }

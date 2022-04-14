@@ -3,12 +3,21 @@
 
 .projects-box {
   @include wrapper;
-  height: 100vh;
+  // height: 100vh;
   @include paddingsection;
   .projects {
     @include paddingsection;
     &-title {
       @include subtitle;
+    }
+    &-list {
+      margin-top: 1rem;
+      @include tablet {
+        margin-top: 2rem;
+      }
+    }
+    .project {
+      padding: 2.5rem 0rem;
     }
   }
 }

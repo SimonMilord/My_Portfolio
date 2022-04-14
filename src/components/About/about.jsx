@@ -74,22 +74,6 @@ export default function About(props) {
           </div>
         </div>
       </div>
-
-      <div className="skills">
-        <ul>
-          <li>HTML</li>
-          <li>CSS/SASS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>MongoDB</li>
-          <li>Git</li>
-          <li>Express</li>
-          <li>Node</li>
-          <li>Ruby</li>
-          <li>Axios</li>
-          <li>Jira</li>
-        </ul>
-      </div>
     </div>
   );
 }
