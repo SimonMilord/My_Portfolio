@@ -38,14 +38,17 @@
     height: 3rem;
     width: 3rem;
     cursor: pointer;
+    // transition: all 0.3s ease;
     &:hover {
+      transition: all 0.3s ease;
       background-color: lightgrey;
     }
     .icon {
       &:hover {
         height: 2.5rem;
         width: 2.5rem;
-        transition: 0.3s;
+        transition: all 0.3s ease;
+        // transition: 0.3s;
         transform: translate(0px, -5px);
       }
     }

@@ -1,9 +1,14 @@
 @import '../../styles/partials/mixins';
 @import '../../styles/partials/variables';
 
-.projects {
+.projects-box {
   @include wrapper;
   height: 100vh;
   @include paddingsection;
-  background-color: hotpink;
+  .projects {
+    @include paddingsection;
+    &-title {
+      @include subtitle;
+    }
+  }
 }
