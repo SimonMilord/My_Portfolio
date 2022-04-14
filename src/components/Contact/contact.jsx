@@ -2,6 +2,10 @@ import "./contact.scss";
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
+// const service_key = process.env.REACT_APP_SERVICE_KEY;
+// const template_id = process.env.REACT_APP_TEMPLATE_ID;
+// const private_key = process.env.REACT_APP_PRIVATE_KEY;
+
 export default function Contact() {
   const form = useRef();
   let name = "";
