@@ -1,32 +1,33 @@
-@import '../../styles/partials/mixins';
-@import '../../styles/partials/variables';
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
 
 .header {
   @include wrapper;
   @include paddingsection;
-  @include display-flex(row,flex-end,center);
+  @include display-flex(row, flex-end, center);
 
   &-right {
-    @include display-flex(row,center,center);
+    @include display-flex(row, center, center);
     .nav {
       display: none;
       @include tablet {
         display: flex;
       }
       &__list {
-        @include display-flex(row,flex-end,center);
+        @include display-flex(row, flex-end, center);
       }
       &__item {
         margin: 0rem 0.5rem;
       }
       &__link {
         text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
         cursor: pointer;
         &:hover {
-          // border-bottom: 2px solid black;
           transition: 0.3s;
           font-weight: bold;
-          font-size: 18px;
+          font-size: 24px;
         }
       }
     }
