@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./header.scss";
-import { Link } from "react-router-dom";
-// import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-// import LightModeIcon from "@mui/icons-material/LightMode";
+import { Link } from "react-scroll";
 import DarkMode from "../Themes/darkMode";
 
 export default function Header(props) {
-  // const [currentTheme, setcurrentTheme] = useState("light");
 
   return (
     <div className="header">
@@ -15,24 +12,25 @@ export default function Header(props) {
         <nav className="nav">
           <ul className="nav__list">
             <li className="nav__item">
-              <Link to="/" className="nav__link">
+              <Link className="nav__link" activeClass='active' to='about' smooth={true}>
                 About
               </Link>
             </li>
             <li className="nav__item">
-              <Link to="/" className="nav__link">
+              <Link className="nav__link" activeClass='active' to='projects' smooth={true}>
                 Projects
               </Link>
             </li>
             <li className="nav__item">
-              <Link to="/" className="nav__link">
+              <Link className="nav__link" activeClass='active' to='contact' smooth={true}>
                 Contact
               </Link>
             </li>
           </ul>
         </nav>
         <DarkMode />
-        </div>
       </div>
+  </div>
   );
 }
+

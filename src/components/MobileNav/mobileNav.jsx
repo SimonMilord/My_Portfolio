@@ -10,7 +10,7 @@ export default function MobileNav(props) {
   let [theme, setTheme] = useState('light');
   useEffect(() => {
     setTheme(localStorage.getItem('theme'));
-    console.log(theme);
+    // console.log(theme);
   }, [theme])
 
   window.addEventListener('storage', () => {

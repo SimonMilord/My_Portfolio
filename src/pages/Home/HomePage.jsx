@@ -1,23 +1,28 @@
-import './HomePage.scss';
+import "./HomePage.scss";
 import React from "react";
-import Header from '../../components/Header/header';
-import Hero from '../../components/Hero/hero';
-import About from '../../components/About/about';
-import Projects from '../../components/Projects/projects';
-import Contact from '../../components/Contact/contact';
-// import MobileNav from '../../components/MobileNav/mobileNav';
+import Header from "../../components/Header/header";
+import Hero from "../../components/Hero/hero";
+import About from "../../components/About/about";
+import Projects from "../../components/Projects/projects";
+import Contact from "../../components/Contact/contact";
+import { Element } from "react-scroll";
 
-function HomePage(props) {
-
+export default function HomePage(props) {
   return (
     <div className="homepage">
-      <Header />
+      <Element name="header" id="header">
+        <Header />
+      </Element>
       <Hero />
-      <About />
-      <Projects />
-      <Contact />
+      <Element name="about" id="about">
+        <About />
+      </Element>
+      <Element name="projects" id="projects">
+        <Projects />
+      </Element>
+      <Element name="contact" id="contact">
+        <Contact />
+      </Element>
     </div>
   );
 }
-
-export default HomePage;

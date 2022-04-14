@@ -1,13 +1,10 @@
 import React from "react";
 import "./footer.scss";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-
+import { Link } from "react-scroll";
 const currentYear = new Date().getFullYear();
 
-export default function footer(props) {
-  const handleClick = (e) => {
-    window.scrollTo(0, 0);
-  };
+export default function Footer() {
 
   return (
     <div className="footer">
@@ -18,9 +15,9 @@ export default function footer(props) {
         <span className="footer__copyright">
           &copy; {currentYear} Let's not pretend this is copyrighted
         </span>
-        <button className="footer__topBtn" onClick={handleClick}>
+        <Link className="footer_topBtn" activeClass='active' to='header' smooth={true}>
           <ArrowUpwardIcon fontSize="large" />
-        </button>
+        </Link>
       </div>
     </div>
   );
