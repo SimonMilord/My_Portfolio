@@ -9,6 +9,8 @@
     @include paddingsection;
     &-title {
       @include subtitle;
+      @include display-flex(row,center,center);
+      font-size: 40px;
     }
     &-list {
       margin-top: 1rem;

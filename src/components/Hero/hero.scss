@@ -2,8 +2,6 @@
 @import '../../styles/partials/variables';
 
 .hero {
-  // @include wrapper;
-  // border: 1px solid black;
   height: 92vh;
   @include paddingsection;
   @include display-flex(column,center,center);

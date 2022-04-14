@@ -4,11 +4,8 @@
 .header {
   @include wrapper;
   @include paddingsection;
-  @include display-flex(row,space-between,center);
-  .logo {
-    font-size: 20px;
-    font-weight: 500;
-  }
+  @include display-flex(row,flex-end,center);
+
   &-right {
     @include display-flex(row,center,center);
     .nav {

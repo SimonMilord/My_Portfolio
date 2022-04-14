@@ -14,13 +14,13 @@ export default function HomePage(props) {
         <Header />
       </Element>
       <Hero />
-      <Element name="about" id="about">
+      <Element name="about" id="about" className="section">
         <About />
       </Element>
-      <Element name="projects" id="projects">
+      <Element name="projects" id="projects" className="section">
         <ProjectsList />
       </Element>
-      <Element name="contact" id="contact">
+      <Element name="contact" id="contact" className="section">
         <Contact />
       </Element>
     </div>

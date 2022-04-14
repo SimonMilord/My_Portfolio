@@ -7,7 +7,6 @@ export default function Header(props) {
 
   return (
     <div className="header">
-      <div className="logo">Simon Milord</div>
       <div className="header-right">
         <nav className="nav">
           <ul className="nav__list">

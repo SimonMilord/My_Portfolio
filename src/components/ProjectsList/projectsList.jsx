@@ -25,8 +25,8 @@ function ProjectsList(props) {
         <ul className='projects-list'>
             {projects.map(item => {
               return (
-              <li className='project'>
-                <ProjectItem project={item} handleClick={handleClick} key={uniqid()}/>
+              <li className='project' key={uniqid()}>
+                <ProjectItem project={item} handleClick={handleClick} />
               </li>
               )
             })}

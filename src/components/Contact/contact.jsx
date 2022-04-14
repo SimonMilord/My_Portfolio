@@ -1,6 +1,6 @@
 import "./contact.scss";
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 // const service_key = process.env.REACT_APP_SERVICE_KEY;
 // const template_id = process.env.REACT_APP_TEMPLATE_ID;
@@ -26,52 +26,96 @@ export default function Contact() {
       return false;
     }
     return true;
-  }
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
     let isValid = validate(e);
     if (isValid) {
-      emailjs.sendForm('service_egkh5yr', 'template_7esbhub', form.current, 'x4gZeZxQ6lq4l--CY')
-        .then((result) => {
-          setmessageSent(true);
-          setTimeout(() => {
-            setmessageSent(false);
-          }, 5000);
-        }, (error) => {
-          setmessageError(true);
-        });
-        e.target.reset();
+      emailjs
+        .sendForm(
+          "service_egkh5yr",
+          "template_7esbhub",
+          form.current,
+          "x4gZeZxQ6lq4l--CY"
+        )
+        .then(
+          (result) => {
+            setmessageSent(true);
+            setTimeout(() => {
+              setmessageSent(false);
+            }, 5000);
+          },
+          (error) => {
+            setmessageError(true);
+          }
+        );
+      e.target.reset();
     }
-  }
+  };
 
   return (
     <div className="contact">
       <h2 className="contact-title">Let's get in touch!</h2>
       <form className="emailForm" ref={form} onSubmit={sendEmail}>
-        {missingInfo && <span className="emailForm__span--error">Please fill all fields before submitting</span>}
-        <input
-          type="text"
-          className={(missingInfo) ? "emailForm__input emailForm__input--invalid" : "emailForm__input"}
-          name="user_name"
-          placeholder="Full name"
-        ></input>
-        <input
-          type="email"
-          className={(missingInfo ) ? "emailForm__input emailForm__input--invalid" : "emailForm__input"}
-          name="user_email"
-          placeholder="Email"
-        ></input>
-        <textarea
-          className={(missingInfo) ? "emailForm__input emailForm__input--message emailForm__input--invalid" : "emailForm__input emailForm__input--message"}
-          name="message"
-          placeholder="Message"
-        ></textarea>
-        <button type="submit" value="Send" className="emailForm__btn">SEND</button>
-        {messageSent && <span className="emailForm__span emailForm__span--success">Message sent!</span>}
-        {messageError && <span className="emailForm__span emailForm__span--error">Seems like there was an error. Please contact me at: simon.milord@gmail.com</span>}
+        {missingInfo && (
+          <span className="emailForm__span--error">
+            Please fill all fields before submitting
+          </span>
+        )}
+        <div className="emailForm__inputBox">
+          <input
+            type="text"
+            className={
+              missingInfo
+                ? "emailForm__input emailForm__input--invalid"
+                : "emailForm__input"
+            }
+            name="user_name"
+            placeholder="Full name"
+          ></input>
+          {/* <span className="emailForm__label">Full Name</span> */}
+        </div>
+        <div className="emailForm__inputBox">
+          <input
+            type="email"
+            className={
+              missingInfo
+                ? "emailForm__input emailForm__input--invalid"
+                : "emailForm__input"
+            }
+            name="user_email"
+            placeholder="Email"
+          ></input>
+          {/* <span className="emailForm__label">Email</span> */}
+        </div>
+        <div className="emailForm__inputBox">
+          <textarea
+            className={
+              missingInfo
+                ? "emailForm__input emailForm__input--message emailForm__input--invalid"
+                : "emailForm__input emailForm__input--message"
+            }
+            name="message"
+            placeholder="Message"
+          ></textarea>
+          {/* <span className="emailForm__label">Message</span> */}
+        </div>
+        <button type="submit" value="Send" className="emailForm__btn">
+          SEND
+        </button>
+        {messageSent && (
+          <span className="emailForm__span emailForm__span--success">
+            Message sent!
+          </span>
+        )}
+        {messageError && (
+          <span className="emailForm__span emailForm__span--error">
+            Seems like there was an error. Please contact me at:
+            simon.milord@gmail.com
+          </span>
+        )}
       </form>
     </div>
   );
 }
-

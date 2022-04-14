@@ -1,15 +1,15 @@
-@import '../../styles/partials/mixins';
-@import '../../styles/partials/variables';
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
 
 .contact {
   @include wrapper;
   height: 100vh;
   @include paddingsection;
-  @include display-flex(column,center,center);
+  @include display-flex(column, center, center);
   &-title {
     @include subtitle;
     font-size: 32px;
-    @include display-flex(row,center,center);
+    @include display-flex(row, center, center);
     @include tablet {
       font-size: 40px;
     }
@@ -17,7 +17,22 @@
   .emailForm {
     width: 100%;
     max-width: 1280px;
-    @include display-flex(column,center,center);
+    @include display-flex(column, center, center);
+    &__inputBox {
+      width: 100%;
+      @include tablet {
+        width: 70%;
+      }
+    }
+    &__label {
+      position: relative;
+      position: absolute;
+      pointer-events: none;
+      top: 18px;
+      left: 10px;
+      transition: 0.2s ease all;
+    }
+
     &__input {
       width: 100%;
       padding: 0.8rem 1rem;
@@ -28,9 +43,6 @@
       transition: all 0.3s ease 0s;
       outline-color: blue;
       background-color: $input-bg;
-      @include tablet {
-        width: 70%;
-      }
       &:hover {
         border-color: blue;
       }
