@@ -3,24 +3,42 @@
 
 .hero {
   height: 92vh;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
   @include paddingsection;
   @include display-flex(column,center,center);
-  @include tablet {
+  @include desktop {
     @include display-flex(row,space-around,center);
   }
 
   &__text {
     width: 100%;
     @include display-flex(column,center,center);
-
+    @include desktop {
+      width: 60%;
+    }
     h1 {
-      font-size: 3rem;
+      @include display-flex(row,center,center);
+      font-size: 55px;
       font-weight: bold;
       margin-bottom: 1rem;
+      @include tablet {
+        font-size: 82px;
+      }
+      @include desktop {
+        font-size: 108px;
+      }
     }
     h2 {
-      font-size: 1.5rem;
+      font-size: 28px;
       font-weight: bold;
+      @include tablet {
+        font-size: 41px;
+      }
+      @include desktop {
+        font-size: 57px;
+      }
     }
   }
 
@@ -29,6 +47,13 @@
     max-height: 500px;
     position: relative;
     min-height: 250px;
+    @include display-flex(row, center,center);
+    @include desktop {
+      width: 40%;
+    }
+    @include desktop {
+      @include display-flex(row,flex-end,center);
+    }
   }
   &__img {
     width: 100%;

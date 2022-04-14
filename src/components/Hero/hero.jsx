@@ -6,8 +6,8 @@ function hero(props) {
   return (
     <div className='hero'>
       <div className='hero__text'>
-        <h1>Hello!</h1>
-        <h2>I'm Simon, a web developer</h2>
+        <h1>Hi, I'm Simon!</h1>
+        <h2>Web developer</h2>
       </div>
       <div className='hero__img-box'>
         <img src={Image} alt="illustration of me" className='hero__img'></img>
