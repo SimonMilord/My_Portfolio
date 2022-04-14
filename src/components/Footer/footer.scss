@@ -35,11 +35,19 @@
     border-radius: 50%;
     background-color: white;
     border: none;
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
     cursor: pointer;
     &:hover {
-      background-color: lightgray;
+      background-color: lightgrey;
+    }
+    .icon {
+      &:hover {
+        height: 2.5rem;
+        width: 2.5rem;
+        transition: 0.3s;
+        transform: translate(0px, -5px);
+      }
     }
   }
 }

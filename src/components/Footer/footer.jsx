@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.scss";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { Link } from "react-scroll";
 const currentYear = new Date().getFullYear();
 
@@ -15,8 +15,8 @@ export default function Footer() {
         <span className="footer__copyright">
           &copy; {currentYear} Let's not pretend this is copyrighted
         </span>
-        <Link className="footer_topBtn" activeClass='active' to='header' smooth={true}>
-          <ArrowUpwardIcon fontSize="large" />
+        <Link className="footer__topBtn" activeClass='active' to='header' smooth={true}>
+          <KeyboardArrowUpIcon fontSize="large" style={{ color: 'black' }} className="icon"/>
         </Link>
       </div>
     </div>
