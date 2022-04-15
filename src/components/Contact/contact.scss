@@ -8,11 +8,8 @@
   @include display-flex(column, center, center);
   &-title {
     @include subtitle;
-    font-size: 32px;
+    @include h2Size;
     @include display-flex(row, center, center);
-    @include tablet {
-      font-size: 40px;
-    }
   }
   .emailForm {
     width: 100%;
@@ -41,10 +38,10 @@
       border: 2px solid black;
       border-radius: 8px;
       transition: all 0.3s ease 0s;
-      outline-color: blue;
+      outline-color: $primary-accent;
       background-color: $input-bg;
       &:hover {
-        border-color: blue;
+        border-color: $secondary-accent;
       }
       &--message {
         min-height: 200px;
@@ -68,14 +65,17 @@
     &__btn {
       border-radius: 8px;
       cursor: pointer;
-      background-color: blue;
+      background-color: $primary-accent;
       color: white;
       font-size: 16px;
       border: none;
       padding: 0.7rem 2.5rem;
       margin: 1rem 0rem;
       &:hover {
-        background-color: hotpink;
+        background-color: $secondary-accent;
+      }
+      &:active {
+        transform: scale(0.95);
       }
     }
   }

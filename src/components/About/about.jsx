@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
 import "./about.scss";
 import LinkedIn from "../../assets/icons/linkedin.png";
 import Github from "../../assets/icons/github.png";
@@ -19,15 +21,15 @@ export default function About(props) {
             I'm a developer from Canada with a background in finance, a CFA
             charter and a keen interest in fintech and E-commerce.
           </p>
-          <p className="infoCard__aboutme infoCard__aboutme--2">
+          {/* <p className="infoCard__aboutme infoCard__aboutme--2">
             Ever since I can remember, solving problems has been a passion of
             mine. It did not matter much whether it was programming Lego robots,
             solving puzzles, math problems, building my own PC or even playing
             real-time strategy games. I felt best when I would finally crack the
             problem and understand the logic behind the solution, after hours of
             tinkering.
-          </p>
-          <p className="infoCard__aboutme infoCard__aboutme--3">
+          </p> */}
+          {/* <p className="infoCard__aboutme infoCard__aboutme--3">
             This passion was rekindled during the pandemic when I took the CS50
             class from Harvard's David Malan. I was learning about logic, data
             structures, algorithms and how the web works and got hooked. Big
@@ -37,6 +39,17 @@ export default function About(props) {
             challenges and I am thrilled by the fact that there will always be
             more opportunities to solve problems, to build new things and above
             all to learn.
+          </p> */}
+          <p className="infoCard__aboutme infoCard__aboutme--3">
+            During the pandemic, I took the CS50
+            class from Harvard's David Malan. I was learning about logic, data
+            structures, algorithms and how the web works and got hooked. Big
+            time. I then pursued The Odin Project (an open-source web
+            development curriculum) and the Brainstation Web Development
+            Bootcamp to further hone my skills. I am now looking for new
+            challenges and I am thrilled by the fact that there will always be
+            more opportunities to solve problems, build new things and above
+            all, to learn.
           </p>
           <p className="infoCard__aboutme infoCard__aboutme--4">
             When you're not finding me at a coffee shop coding, I enjoy running,
@@ -68,9 +81,9 @@ export default function About(props) {
                 alt="twitter logo"
               ></img>
             </Link>
-            <Link to="/email" className="infoCard__link">
+            <ScrollLink activeClass='active' to='contact' smooth={true} className="infoCard__link">
               <img className="infoCard__img" src={Email} alt="email logo"></img>
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </div>

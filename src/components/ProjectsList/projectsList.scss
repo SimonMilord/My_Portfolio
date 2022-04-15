@@ -10,7 +10,7 @@
     &-title {
       @include subtitle;
       @include display-flex(row,center,center);
-      font-size: 40px;
+      @include h2Size;
     }
     &-list {
       margin-top: 1rem;

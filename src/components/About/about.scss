@@ -8,9 +8,7 @@
   @include tablet {
     height: 100vh;
   }
-  @include desktop {
-    @include display-flex(row,space-between,center);
-  }
+
   .info {
     width: 100%;
     @include desktop {
@@ -19,7 +17,6 @@
     .infoCard {
       @include paddingsection;
       @include desktop {
-        border: 1px solid black;
         border-radius: 8px;
       }
 
@@ -30,9 +27,15 @@
         .emoji {
           height: 16px;
         }
+        @include tablet {
+          font-size: 20px;
+          line-height: 1.5;
+        }
       }
       &__title {
         @include subtitle;
+        @include display-flex(row,center,center);
+        @include h2Size;
         @include tablet {
           margin-bottom: 2rem;
         }
@@ -47,6 +50,12 @@
       &__link {
         @include display-flex(row,center,center);
         margin: 0rem 0.5rem;
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
       }
       &__img {
         width: 40px;

@@ -14,6 +14,9 @@
     &:hover {
       transform: scale(1.05);
     }
+    &:active {
+      transform: scale(1);
+    }
   }
   &__info {
     width: 70%;
@@ -33,18 +36,18 @@
     }
   }
   &__name {
-    font-size: 24px;
+    @include h3Size;
     margin-right: 1rem;
     &:hover {
       transition: 0.3s;
-      font-weight: bold;
+      font-weight: 500;
       cursor: pointer;
     }
   }
   &__year {
     font-size: 12px;
-    background-color: lightgreen;
-    color: black;
+    background-color: $primary-accent;
+    color: white;
     border-radius: 8px;
     padding: 0.35rem;
     &:hover {
@@ -72,6 +75,9 @@
     &:hover {
       transition: 0.3s;
       font-weight: bold;
+    }
+    &:active {
+      transform: scale(0.95);
     }
     &--demo {
       margin-right: 2rem;

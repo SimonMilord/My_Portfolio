@@ -38,3 +38,25 @@
   max-width: $wrapper;
   margin: 0 auto;
 }
+
+// font sizes
+
+@mixin h2Size {
+  font-size: 32px;
+  @include tablet {
+    font-size: 40px;
+  }
+  @include desktop {
+    font-size: 48px;
+  }
+}
+
+@mixin h3Size {
+  font-size: 24px;
+  @include tablet {
+    font-size: 32px;
+  }
+  @include desktop {
+    font-size: 40px;
+  }
+}
