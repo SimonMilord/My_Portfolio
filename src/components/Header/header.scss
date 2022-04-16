@@ -2,13 +2,13 @@
 @import "../../styles/partials/variables";
 
 .header {
-  // @include wrapper;
   @include paddingsection;
   @include display-flex(row, flex-end, center);
   height: 18vh;
   margin-bottom: 1rem;
   position: relative;
-  background-color: $wave-color;
+  // background-color: $wave-color;
+  @include gradient;
   @include tablet {
     height: 22vh;
   }

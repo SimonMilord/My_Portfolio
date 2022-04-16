@@ -63,3 +63,14 @@
     font-size: 40px;
   }
 }
+
+@mixin gradient {
+  background: linear-gradient(
+    45deg,
+    #23d5ab,
+    #23a6d5,
+    #4379ff,
+    #2B4EE6,
+    #5433FF
+  );
+}

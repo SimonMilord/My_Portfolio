@@ -4,7 +4,7 @@
 .footer {
   height: 25vh;
   position: relative;
-  background-color: $wave-color;
+  @include gradient;
   @include paddingsection;
   @include display-flex(row, space-between, center);
   width: 100%;
