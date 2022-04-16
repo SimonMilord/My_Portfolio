@@ -2,10 +2,12 @@ import "./contact.scss";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-// const service_key = process.env.REACT_APP_SERVICE_KEY;
-// const template_id = process.env.REACT_APP_TEMPLATE_ID;
-// const private_key = process.env.REACT_APP_PRIVATE_KEY;
-
+const service_key = process.env.REACT_APP_SERVICE_KEY;
+const template_id = process.env.REACT_APP_TEMPLATE_ID;
+const private_key = process.env.REACT_APP_PRIVATE_KEY;
+console.log(service_key);
+console.log(template_id);
+console.log(private_key);
 export default function Contact() {
   const form = useRef();
   let name = "";
@@ -32,13 +34,20 @@ export default function Contact() {
     e.preventDefault();
     let isValid = validate(e);
     if (isValid) {
+      // emailjs
+      //   .sendForm(
+      //     "service_egkh5yr",
+      //     "template_7esbhub",
+      //     form.current,
+      //     "x4gZeZxQ6lq4l--CY"
+      //   )
       emailjs
-        .sendForm(
-          "service_egkh5yr",
-          "template_7esbhub",
-          form.current,
-          "x4gZeZxQ6lq4l--CY"
-        )
+      .sendForm(
+        `${service_key}`,
+        `${template_id}`,
+        form.current,
+        `${private_key}`
+      )
         .then(
           (result) => {
             setmessageSent(true);
