@@ -1,7 +1,7 @@
 # My Personal Portfolio website
 
-## Live version here:
-[Live](https://simonmilord.netlify.app/),
+[Click here for the live version!](https://simonmilord.netlify.app/)
+
 ## Usage for local
 
 In the project directory, you can run:
