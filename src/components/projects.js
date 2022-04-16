@@ -16,7 +16,10 @@ const stonkers = Project(
   2022,
   "https://stonkers.netlify.app/",
   "https://github.com/SimonMilord/Stonkers",
-  "Stonkers is a fully responsive web application that allows users to look up quotes, charts, news and stats of stocks. It also allows them to add stocks to their watchlist. It was built using the MERN stack, Chart.JS and JWT. It features databases, server-side authentication and the use of API data. "
+  `Stonkers is a fully responsive web application that allows users to look up quotes, charts, news and stats of stocks.
+  It also allows them to add stocks to their watchlist. It was built using the MERN stack, Chart.JS and JWT.
+  It features databases, server-side authentication and the use of API data. The app seeks to provide beginners and new investors
+  a simple to use interface to help them keep an eye on their investments. `
 );
 
 const projects = [stonkers];
