@@ -9,7 +9,7 @@
   @include paddingsection;
   @include display-flex(column, flex-start, center);
   @include tablet {
-    @include display-flex(column,flex-start,center);
+    @include display-flex(column, flex-start, center);
   }
   @include desktop {
     @include display-flex(row, flex-start, center);

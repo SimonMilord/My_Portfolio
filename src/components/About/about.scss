@@ -1,10 +1,10 @@
-@import '../../styles/partials/mixins';
-@import '../../styles/partials/variables';
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
 
 .about {
   @include wrapper;
   height: 100vh;
-  @include display-flex(column,center,center);
+  @include display-flex(column, center, center);
   @include paddingsection;
   @include tablet {
     height: 100vh;
@@ -34,7 +34,7 @@
       }
       &__title {
         @include subtitle;
-        @include display-flex(row,center,center);
+        @include display-flex(row, center, center);
         @include h2Size;
         @include tablet {
           margin-bottom: 2rem;
@@ -42,19 +42,20 @@
       }
       &__links {
         margin: 2rem;
-        @include display-flex(row,space-evenly,center);
+        @include display-flex(row, space-evenly, center);
         @include tablet {
-          @include display-flex(row,flex-start,center);
+          @include display-flex(row, flex-start, center);
           margin: 2rem 0rem 0rem 0rem;
         }
       }
       &__link {
         border-radius: 50%;
-        @include display-flex(row,center,center);
+        @include display-flex(row, center, center);
         margin-right: 2rem;
         &:hover {
           cursor: pointer;
-          filter: invert(29%) sepia(89%) saturate(7288%) hue-rotate(250deg) brightness(100%) contrast(102%);
+          filter: invert(29%) sepia(89%) saturate(7288%) hue-rotate(250deg)
+            brightness(100%) contrast(102%);
         }
         &:active {
           transform: scale(0.95);
@@ -62,10 +63,12 @@
       }
       &__img {
         width: 40px;
-        filter: invert(24%) sepia(74%) saturate(4280%) hue-rotate(229deg) brightness(92%) contrast(95%);
+        filter: invert(24%) sepia(74%) saturate(4280%) hue-rotate(229deg)
+          brightness(92%) contrast(95%);
         &:hover {
           transform: scale(1.1);
-          filter: invert(24%) sepia(74%) saturate(4280%) hue-rotate(229deg) brightness(92%) contrast(95%);
+          filter: invert(24%) sepia(74%) saturate(4280%) hue-rotate(229deg)
+            brightness(92%) contrast(95%);
         }
       }
     }

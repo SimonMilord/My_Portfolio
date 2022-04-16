@@ -16,48 +16,48 @@
     height: 22vh;
   }
 
-.header-wave {
+  .header-wave {
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-}
+  }
 
-.header-wave svg {
+  .header-wave svg {
     position: relative;
     display: block;
     width: calc(120% + 1.3px);
     height: 100px;
-}
+  }
 
-.header-wave .shape-fill {
-    fill: #FFFFFF;
+  .header-wave .shape-fill {
+    fill: #ffffff;
     transition: 0.3s;
-}
-.header-wave .shape-fill--dark {
-  fill: #000000;
-  transition: 0.3s;
-}
+  }
+  .header-wave .shape-fill--dark {
+    fill: #000000;
+    transition: 0.3s;
+  }
 
-/** For tablet devices **/
-@media (min-width: 768px) and (max-width: 1023px) {
+  /** For tablet devices **/
+  @media (min-width: 768px) and (max-width: 1023px) {
     .header-wave svg {
-        width: calc(125% + 1.3px);
-        height: 100px;
+      width: calc(125% + 1.3px);
+      height: 100px;
     }
-}
+  }
 
-/** For mobile devices **/
-@media (max-width: 767px) {
+  /** For mobile devices **/
+  @media (max-width: 767px) {
     .header-wave svg {
-        width: calc(120% + 1.3px);
-        height: 55px;
+      width: calc(120% + 1.3px);
+      height: 55px;
     }
-}
+  }
 
   &-right {
     @include display-flex(row, center, center);

@@ -2,11 +2,3 @@
 @import '../../styles/partials/variables';
 @import '../../styles/partials/fonts';
 
-.homepage {
-  scroll-snap-type: mandatory;
-  // overflow-y: scroll;
-
-  Element {
-    scroll-snap-align: start;
-  }
-}

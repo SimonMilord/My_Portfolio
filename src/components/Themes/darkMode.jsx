@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./darkMode.scss";
 
 const Darkmode = (props) => {
-  let clickedClass = 'clicked';
+  let clickedClass = "clicked";
   const body = document.body;
-  const lightTheme = 'light';
-  const darkTheme = 'dark';
-  let [theme, setTheme] = useState('light');
+  const lightTheme = "light";
+  const darkTheme = "dark";
+  let [theme, setTheme] = useState("light");
 
   if (localStorage) {
-    theme = localStorage.getItem('theme');
+    theme = localStorage.getItem("theme");
   }
 
   if (theme === lightTheme || theme === darkTheme) {
@@ -36,11 +36,12 @@ const Darkmode = (props) => {
   return (
     <>
       <button
-      className={theme === "dark" ? "darkMode" : "lightMode"}
-      id="darkMode"
-      onClick={(e) => switchTheme(e)}></button>
+        className={theme === "dark" ? "darkMode" : "lightMode"}
+        id="darkMode"
+        onClick={(e) => switchTheme(e)}
+      ></button>
     </>
   );
-}
+};
 
 export default Darkmode;

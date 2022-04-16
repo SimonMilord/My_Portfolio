@@ -1,9 +1,9 @@
-@import '../../styles/partials/mixins';
-@import '../../styles/partials/variables';
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
 
 .darkMode {
   margin-left: 1rem;
-  background: white url('../../assets/icons/moon.png') no-repeat center;
+  background: white url("../../assets/icons/moon.png") no-repeat center;
   background-size: 30px 30px;
   width: 45px;
   height: 45px;
@@ -24,7 +24,7 @@
 
 .lightMode {
   margin-left: 1rem;
-  background: white url('../../assets/icons/sun.png') no-repeat center;
+  background: white url("../../assets/icons/sun.png") no-repeat center;
   background-size: 30px 30px;
   width: 45px;
   height: 45px;

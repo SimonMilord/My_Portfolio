@@ -59,7 +59,7 @@
         color: red;
       }
       &--success {
-        color: green;
+        color: $secondary-accent;
       }
     }
     &__btn {

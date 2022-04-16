@@ -25,8 +25,8 @@ export default function About(props) {
             started when I took the CS50 class from Harvard's David Malan. I
             spent my evenings learning about data structures, algorithms, how
             the web works, and was immediately hooked. Once I completed the
-            course, I pursued The Odin Project and the Brainstation Web Development
-            Bootcamp to further hone my skills.
+            course, I pursued The Odin Project and the Brainstation Web
+            Development Bootcamp to further hone my skills.
           </p>
           <p className="infoCard__aboutme infoCard__aboutme--3">
             I am now looking for new challenges and I am thrilled by the fact

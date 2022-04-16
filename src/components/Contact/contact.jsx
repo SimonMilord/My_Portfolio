@@ -74,7 +74,6 @@ export default function Contact() {
             name="user_name"
             placeholder="Full name"
           ></input>
-          {/* <span className="emailForm__label">Full Name</span> */}
         </div>
         <div className="emailForm__inputBox">
           <input
@@ -87,7 +86,6 @@ export default function Contact() {
             name="user_email"
             placeholder="Email"
           ></input>
-          {/* <span className="emailForm__label">Email</span> */}
         </div>
         <div className="emailForm__inputBox">
           <textarea
@@ -99,7 +97,6 @@ export default function Contact() {
             name="message"
             placeholder="Message"
           ></textarea>
-          {/* <span className="emailForm__label">Message</span> */}
         </div>
         <button type="submit" value="Send" className="emailForm__btn">
           SEND

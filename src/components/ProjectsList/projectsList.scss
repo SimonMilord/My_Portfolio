@@ -1,15 +1,14 @@
-@import '../../styles/partials/mixins';
-@import '../../styles/partials/variables';
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
 
 .projects-box {
   @include wrapper;
   height: 100vh;
   @include paddingsection;
   .projects {
-    // @include paddingsection;
     &-title {
       @include subtitle;
-      @include display-flex(row,center,center);
+      @include display-flex(row, center, center);
       @include h2Size;
     }
     &-list {
