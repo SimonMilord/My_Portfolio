@@ -5,7 +5,7 @@ import DarkMode from "../Themes/darkMode";
 
 export default function Header(props) {
 
-  const [theme, setTheme] = useState('light');
+  let [theme, setTheme] = useState('dark');
 
   const handleTheme = (value) => {
     setTheme(value);

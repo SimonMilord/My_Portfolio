@@ -9,10 +9,11 @@
   @include paddingsection;
   @include display-flex(column, flex-start, center);
   @include tablet {
-    @include display-flex(column,space-around,center);
+    @include display-flex(column,flex-start,center);
   }
   @include desktop {
-    @include display-flex(row, space-around, center);
+    @include display-flex(row, flex-start, center);
+    padding: 0rem 4rem;
   }
 
   &__text {
@@ -20,6 +21,9 @@
     @include display-flex(column, flex-start, center);
     @include desktop {
       width: 60%;
+      height: 100%;
+      @include display-flex(column, center, center);
+      margin-bottom: 20rem;
     }
   }
 
@@ -56,6 +60,7 @@
     font-size: 28px;
     line-height: 1.2;
     font-weight: 500;
+    color: $primary-accent;
     @include display-flex(row, flex-start, center);
     @include tablet {
       width: 100%;
@@ -79,8 +84,7 @@
       font-size: 22px;
     }
     &-content {
-      max-width: 540px;
-      margin-bottom: 1rem;
+      max-width: 550px;
       @include tablet {
         margin-bottom: 0rem;
       }
@@ -89,15 +93,14 @@
 
   &__img-box {
     width: 100%;
-    max-height: 500px;
     position: relative;
     min-height: 250px;
     @include display-flex(row, center, center);
     @include desktop {
       width: 40%;
-    }
-    @include desktop {
-      @include display-flex(row, flex-end, center);
+      height: 100%;
+      @include display-flex(row, center, center);
+      margin-bottom: 20rem;
     }
   }
   @keyframes float {
@@ -119,5 +122,9 @@
     overflow: hidden;
     transform: translatey(0px);
     animation: float 7s ease-in-out infinite;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    @include desktop {
+      max-height: 700px;
+    }
   }
 }

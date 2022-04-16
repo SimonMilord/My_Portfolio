@@ -3,7 +3,7 @@
 
 .projects-box {
   @include wrapper;
-  // height: 100vh;
+  height: 100vh;
   @include paddingsection;
   .projects {
     // @include paddingsection;

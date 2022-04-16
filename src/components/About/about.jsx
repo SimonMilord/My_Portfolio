@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "./about.scss";
-import LinkedIn from "../../assets/icons/linkedin.png";
-import Github from "../../assets/icons/github.png";
-import Twitter from "../../assets/icons/twitter.png";
-import Email from "../../assets/icons/email.png";
+import LinkedIn from "../../assets/icons/linkedin.svg";
+import Github from "../../assets/icons/github.svg";
+import Twitter from "../../assets/icons/twitter.svg";
+import Email from "../../assets/icons/email.svg";
 
 export default function About(props) {
   return (

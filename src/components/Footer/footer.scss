@@ -2,31 +2,38 @@
 @import '../../styles/partials/variables';
 
 .footer {
-  // @include wrapper;
   height: 25vh;
   position: relative;
-  background-color: $primary-accent;
+  background-color: $wave-color;
   @include paddingsection;
-  @include display-flex(column,space-between,flex-start);
+  @include display-flex(row,space-between,center);
   width: 100%;
-  bottom: 4rem;
-  @include tablet {
-    bottom: 0rem;
-  }
-  &__top {
-    width: 100%;
-  }
+
   &__content {
-    @include display-flex(row,space-between,flex-end);
+    @include display-flex(column,flex-end,flex-end);
     width: 100%;
     z-index: 999;
     height: 100%;
   }
-  &__name {
-    @include subtitle;
-    margin-bottom: 1rem;
+  &__copyright {
+    width:100%;
+    margin-top: 1rem;
+  }
+  &__right {
+    height: 100%;
+    width: 50%;
+    z-index: 999;
+    @include display-flex(column,flex-end,flex-end);
+  }
+  &__links {
     width: 100%;
-    @include h3Size;
+    margin-top: 2rem;
+  }
+  &__link {
+    margin-right: 1rem;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    &:hover {
+      filter: invert(90%) sepia(0%) saturate(336%) hue-rotate(157deg) brightness(102%) contrast(79%);    }
   }
   &__copyright {
     font-size: 14px;
@@ -50,7 +57,6 @@
         height: 2.5rem;
         width: 2.5rem;
         transition: all 0.3s ease;
-        // transition: 0.3s;
         transform: translate(0px, -5px);
       }
     }

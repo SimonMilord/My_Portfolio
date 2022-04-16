@@ -5,9 +5,16 @@
   // @include wrapper;
   @include paddingsection;
   @include display-flex(row, flex-end, center);
-  height: 25vh;
+  height: 18vh;
+  margin-bottom: 1rem;
   position: relative;
-  background-color: $primary-accent;
+  background-color: $wave-color;
+  @include tablet {
+    height: 22vh;
+  }
+  @include desktop {
+    height: 22vh;
+  }
 
 .header-wave {
     position: absolute;
@@ -77,9 +84,7 @@
           transition: 0.3s;
           font-weight: bold;
           font-size: 24px;
-          // color: $secondary-accent;
           color: lightgrey;
-          // color: $primary-accent;
         }
       }
     }
