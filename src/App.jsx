@@ -2,7 +2,6 @@ import "./App.scss";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/Home/HomePage";
-import Footer from "./components/Footer/footer";
 import MobileNav from "./components/MobileNav/mobileNav";
 
 function App() {
@@ -47,7 +46,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-      <Footer />
       <MobileNav />
     </>
   );

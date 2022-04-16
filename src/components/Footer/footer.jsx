@@ -1,23 +1,41 @@
 import React from "react";
 import "./footer.scss";
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { Link } from "react-scroll";
 const currentYear = new Date().getFullYear();
 
-export default function Footer() {
-
+export default function Footer(props) {
   return (
     <div className="footer">
-      <div className="footer__top">
-        <h2 className="footer__name">Simon Milord</h2>
-      </div>
-      <div className="footer__bottom">
+      <div className="footer__content">
         <span className="footer__copyright">
           &copy; {currentYear} Let's not pretend this is copyrighted
         </span>
-        <Link className="footer__topBtn" activeClass='active' to='header' smooth={true}>
-          <KeyboardArrowUpIcon fontSize="large" style={{ color: 'black' }} className="icon"/>
+        <Link
+          className="footer__topBtn"
+          activeClass="active"
+          to="header"
+          smooth={true}
+        >
+          <KeyboardArrowUpIcon
+            fontSize="large"
+            style={{ color: "black" }}
+            className="icon"
+          />
         </Link>
+      </div>
+      <div className="footer-wave">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            className={ props.theme === "light" ? "shape-fill" : "shape-fill--dark"}
+          ></path>
+        </svg>
       </div>
     </div>
   );

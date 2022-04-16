@@ -1,40 +1,32 @@
-import React, {useEffect, useRef} from 'react';
-import './hero.scss';
-// import Image from "../../assets/images/placeholder.svg";
-import Illustration from '../../assets/images/illustration1.svg';
-import lottie from 'lottie-web';
-
+import React from "react";
+import "./hero.scss";
+import Illustration from "../../assets/images/illustrationHero.svg";
 
 function Hero(props) {
-
-  const container = useRef(null);
-
-  useEffect(() => {
-    lottie.loadAnimation({
-      container: container.current,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: require('../../assets/images/illustration.json')
-
-    })
-  }, [])
-
   return (
-    <div className='hero'>
-      <div className='hero__text'>
-        <h1>Hi, I'm Simon!</h1>
-        <h2>Web developer</h2>
+    <div className="hero">
+      <div className="hero__text">
+        <span className="hero__intro">Hi, my name is</span>
+        <h1 className="hero__title">Simon Milord</h1>
+        <h2 className="hero__subtitle">Web developer</h2>
+        <div className="hero__desc">
+          <p className="hero__desc-content">
+            {" "}
+            I'm a developer from Canada with a background in finance and a keen
+            interest in Fintech and E-Commerce. I'm also a CFA charter holder and
+            was an investment advisor in my past life!
+          </p>
+        </div>
       </div>
-      <div className='hero__img-box'>
-        {/* <img src={Illustration} alt="illustration of me" className='hero__img'></img> */}
-        <div className='hero__img' ref={container}></div>
+      <div className="hero__img-box">
+        <img
+          src={Illustration}
+          alt="illustration of me"
+          className="hero__img"
+        ></img>
       </div>
     </div>
   );
 }
 
 export default Hero;
-
-
-

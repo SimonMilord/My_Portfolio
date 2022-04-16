@@ -1,17 +1,24 @@
 import "./HomePage.scss";
-import React from "react";
+import React, {useState} from "react";
 import Header from "../../components/Header/header";
 import Hero from "../../components/Hero/hero";
 import About from "../../components/About/about";
 import ProjectsList from "../../components/ProjectsList/projectsList";
 import Contact from "../../components/Contact/contact";
+import Footer from "../../components/Footer/footer";
 import { Element } from "react-scroll";
 
 export default function HomePage(props) {
+  const [theme, setTheme] = useState('light');
+
+  const handleTheme = (value) => {
+    setTheme(value);
+  }
+
   return (
     <div className="homepage">
       <Element name="header" id="header">
-        <Header />
+        <Header getTheme={handleTheme}/>
       </Element>
       <Hero />
       <Element name="about" id="about" className="section">
@@ -23,6 +30,7 @@ export default function HomePage(props) {
       <Element name="contact" id="contact" className="section">
         <Contact />
       </Element>
+      <Footer theme={theme}/>
     </div>
   );
 }

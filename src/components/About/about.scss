@@ -15,7 +15,8 @@
       width: 50%;
     }
     .infoCard {
-      @include paddingsection;
+      // @include paddingsection;
+
       @include desktop {
         border-radius: 8px;
       }
@@ -42,12 +43,15 @@
       }
       &__links {
         margin: 1rem;
-        @include display-flex(row,center,center);
+        @include display-flex(row,flex-start,center);
         @include tablet {
           margin: 2rem 0rem 0rem 0rem;
         }
       }
       &__link {
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 50%;
         @include display-flex(row,center,center);
         margin: 0rem 0.5rem;
         &:hover {

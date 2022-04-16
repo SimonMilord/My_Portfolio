@@ -2,12 +2,60 @@
 @import "../../styles/partials/variables";
 
 .header {
-  @include wrapper;
+  // @include wrapper;
   @include paddingsection;
   @include display-flex(row, flex-end, center);
+  height: 25vh;
+  position: relative;
+  background-color: $primary-accent;
+
+.header-wave {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.header-wave svg {
+    position: relative;
+    display: block;
+    width: calc(120% + 1.3px);
+    height: 100px;
+}
+
+.header-wave .shape-fill {
+    fill: #FFFFFF;
+    transition: 0.3s;
+}
+.header-wave .shape-fill--dark {
+  fill: #000000;
+  transition: 0.3s;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header-wave svg {
+        width: calc(125% + 1.3px);
+        height: 100px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .header-wave svg {
+        width: calc(120% + 1.3px);
+        height: 55px;
+    }
+}
 
   &-right {
     @include display-flex(row, center, center);
+    position: absolute;
+    z-index: 999;
     .nav {
       display: none;
       @include tablet {
@@ -23,13 +71,15 @@
         text-decoration: none;
         font-size: 20px;
         font-weight: 500;
+        color: white;
         cursor: pointer;
         &:hover {
           transition: 0.3s;
           font-weight: bold;
           font-size: 24px;
           // color: $secondary-accent;
-          color: $primary-accent;
+          color: lightgrey;
+          // color: $primary-accent;
         }
       }
     }

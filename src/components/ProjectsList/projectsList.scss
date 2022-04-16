@@ -6,7 +6,7 @@
   // height: 100vh;
   @include paddingsection;
   .projects {
-    @include paddingsection;
+    // @include paddingsection;
     &-title {
       @include subtitle;
       @include display-flex(row,center,center);

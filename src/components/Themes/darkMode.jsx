@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./darkMode.scss";
 
-const Darkmode = () => {
+const Darkmode = (props) => {
   let clickedClass = 'clicked';
   const body = document.body;
   const lightTheme = 'light';
@@ -30,6 +30,7 @@ const Darkmode = () => {
       localStorage.setItem("theme", "dark");
       setTheme(darkTheme);
     }
+    props.getTheme(theme);
   };
 
   return (

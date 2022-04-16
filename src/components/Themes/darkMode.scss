@@ -7,12 +7,10 @@
   background-size: 30px 30px;
   width: 45px;
   height: 45px;
-  // filter: grayscale(100%);
   border: none;
   border-radius: 50%;
   &:hover {
     background-color: lightgrey;
-    // transition: 0.3s linear;
     filter: none;
     cursor: pointer;
   }
@@ -26,7 +24,7 @@
 
 .lightMode {
   margin-left: 1rem;
-  background: transparent url('../../assets/icons/sun.png') no-repeat center;
+  background: white url('../../assets/icons/sun.png') no-repeat center;
   background-size: 30px 30px;
   width: 45px;
   height: 45px;
@@ -35,7 +33,6 @@
   border-radius: 50%;
   &:hover {
     background-color: lightgray;
-    // transition: 0.3s linear;
     filter: none;
     cursor: pointer;
   }
