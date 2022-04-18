@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
 import "./about.scss";
 import LinkedIn from "../../assets/icons/linkedin.svg";
 import Github from "../../assets/icons/github.svg";
@@ -55,14 +54,9 @@ export default function About(props) {
                 alt="twitter logo"
               ></img>
             </Link>
-            <ScrollLink
-              activeClass="active"
-              to="contact"
-              smooth={true}
-              className="infoCard__link"
-            >
+            <a href="mailto:simon.milord@gmail.com" className="infoCard__link">
               <img className="infoCard__img" src={Email} alt="email logo"></img>
-            </ScrollLink>
+            </a>
           </div>
         </div>
       </div>

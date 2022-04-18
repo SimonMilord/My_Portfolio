@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import LinkedIn from "../../assets/icons/linkedin.svg";
 import Github from "../../assets/icons/github.svg";
 import Twitter from "../../assets/icons/twitter.svg";
+import Email from "../../assets/icons/email.svg";
 const currentYear = new Date().getFullYear();
 
 export default function Footer(props) {
@@ -26,6 +27,9 @@ export default function Footer(props) {
           <Link to="/twitter" className="footer__link">
             <img className="footer__img" src={Twitter} alt="twitter logo"></img>
           </Link>
+          <a href="mailto:simon.milord@gmail.com" className="footer__link">
+            <img className="footer__img" src={Email} alt="email icon"></img>
+          </a>
         </div>
         <span className="footer__copyright">
           &copy; {currentYear} Let's not pretend this is copyrighted

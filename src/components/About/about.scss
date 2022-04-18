@@ -41,8 +41,8 @@
         }
       }
       &__links {
-        margin: 2rem;
-        @include display-flex(row, space-evenly, center);
+        margin: 2rem 0rem;
+        @include display-flex(row, center, center);
         @include tablet {
           @include display-flex(row, flex-start, center);
           margin: 2rem 0rem 0rem 0rem;
@@ -51,7 +51,7 @@
       &__link {
         border-radius: 50%;
         @include display-flex(row, center, center);
-        margin-right: 2rem;
+        margin: 0rem 1rem;
         &:hover {
           cursor: pointer;
           filter: invert(29%) sepia(89%) saturate(7288%) hue-rotate(250deg)
