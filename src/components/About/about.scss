@@ -4,14 +4,21 @@
 .about {
   @include wrapper;
   height: 100vh;
+  // background-color: $modal-background;
   @include display-flex(column, center, center);
   @include paddingsection;
   @include tablet {
+    color: black;
     height: 100vh;
   }
 
   .info {
     width: 100%;
+    @include tablet {
+      padding: 2rem;
+      background-color: $modal-background;
+      border-radius: 8px;
+    }
     @include desktop {
       width: 50%;
     }
