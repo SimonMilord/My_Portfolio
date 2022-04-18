@@ -26,42 +26,45 @@ export default function Header(props) {
           ></path>
         </svg>
       </div>
-      <div className="header-right">
-        <nav className="nav">
-          <ul className="nav__list">
-            <li className="nav__item">
-              <Link
-                className="nav__link"
-                activeClass="active"
-                to="about"
-                smooth={true}
-              >
-                About
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link
-                className="nav__link"
-                activeClass="active"
-                to="projects"
-                smooth={true}
-              >
-                Projects
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link
-                className="nav__link"
-                activeClass="active"
-                to="contact"
-                smooth={true}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <DarkMode getTheme={handleTheme} />
+      <div className="header-rightBox">
+        <div className="header-right">
+          <nav className="nav">
+            <ul className="nav__list">
+              <li className="nav__item">
+                <Link
+                  className="nav__link"
+                  activeClass="active"
+                  to="about"
+                  smooth={true}
+                >
+                  About
+                </Link>
+              </li>
+              <li className="nav__item">
+                <Link
+                  className="nav__link"
+                  activeClass="active"
+                  to="projects"
+                  smooth={true}
+                >
+                  Projects
+                </Link>
+              </li>
+              <li className="nav__item">
+                <Link
+                  className="nav__link"
+                  activeClass="active"
+                  to="contact"
+                  smooth={true}
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <DarkMode getTheme={handleTheme} />
+        </div>
+
       </div>
     </div>
   );

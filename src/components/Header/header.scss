@@ -7,7 +7,6 @@
   height: 18vh;
   margin-bottom: 1rem;
   position: relative;
-  // background-color: $wave-color;
   @include gradient;
   @include tablet {
     height: 22vh;
@@ -59,13 +58,20 @@
     }
   }
 
+  &-rightBox {
+    height: 100%;
+    @include display-flex(row,center,flex-start);
+    position: relative;
+  }
   &-right {
+    // height: 100%;
     @include display-flex(row, center, center);
-    position: absolute;
+    position: relative;
     z-index: 999;
     .nav {
       display: none;
       @include tablet {
+        height: 100%;
         display: flex;
       }
       &__list {
