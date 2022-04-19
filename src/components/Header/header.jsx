@@ -6,8 +6,8 @@ import DarkMode from "../Themes/darkMode";
 export default function Header(props) {
   let [theme, setTheme] = useState('light');
 
-  const handleTheme = (value) => {
-    setTheme(value);
+  const handleTheme = async(value) => {
+    await setTheme(value);
     props.getTheme(theme);
     console.log(value);
   };
