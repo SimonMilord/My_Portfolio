@@ -18,7 +18,7 @@ const Darkmode = (props) => {
     body.classList.add(lightTheme);
   }
 
-  const switchTheme = (e) => {
+  const  switchTheme = (e) => {
     if (theme === darkTheme) {
       body.classList.replace(darkTheme, lightTheme);
       e.target.classList.remove(clickedClass);

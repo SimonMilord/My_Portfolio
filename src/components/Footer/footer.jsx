@@ -10,6 +10,7 @@ import Email from "../../assets/icons/email.svg";
 const currentYear = new Date().getFullYear();
 
 export default function Footer(props) {
+  console.log("footer:"+props.theme);
   return (
     <div className="footer">
       <div className="footer__content">
