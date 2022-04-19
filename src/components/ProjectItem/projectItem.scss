@@ -9,9 +9,11 @@
     border-radius: 8px;
     margin-bottom: 2rem;
     transition: 0.3s;
-    @include tablet {
-      width: 75%;
-    }
+    max-height: 369px;
+    max-width: 657px;
+    // @include tablet {
+    //   width: 75%;
+    // }
     &:hover {
       transform: scale(1.05);
     }
