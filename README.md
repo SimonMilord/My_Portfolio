@@ -1,6 +1,6 @@
 # My Personal Portfolio website
 
-[Click here for the live version!](https://simonmilord.netlify.app/)
+[Click here for the live version!](https://simonmilord.com/)
 
 ## Usage for local
 
