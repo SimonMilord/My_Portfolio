@@ -57,6 +57,9 @@ export default function About(props) {
             <a href="mailto:simon.milord@gmail.com" className="infoCard__link">
               <img className="infoCard__img" src={Email} alt="email logo"></img>
             </a>
+            <a href="/resume.pdf" className="infoCard__link infoCard__link--resume">
+              <div className="infoCard__cv">CV</div>
+            </a>
           </div>
         </div>
       </div>

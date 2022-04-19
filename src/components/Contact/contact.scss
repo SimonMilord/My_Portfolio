@@ -71,6 +71,7 @@
       border: none;
       padding: 0.7rem 2.5rem;
       margin: 1rem 0rem;
+      transition: 0.3s;
       &:hover {
         background-color: $secondary-accent;
       }

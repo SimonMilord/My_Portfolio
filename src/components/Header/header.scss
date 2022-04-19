@@ -64,7 +64,6 @@
     position: relative;
   }
   &-right {
-    // height: 100%;
     @include display-flex(row, center, center);
     position: relative;
     z-index: 999;
@@ -86,8 +85,8 @@
         font-weight: 500;
         color: white;
         cursor: pointer;
+        transition: 0.3s;
         &:hover {
-          transition: 0.3s;
           font-weight: bold;
           font-size: 24px;
           color: lightgrey;

@@ -4,7 +4,6 @@
 .about {
   @include wrapper;
   height: 100vh;
-  // background-color: $modal-background;
   @include display-flex(column, center, center);
   @include paddingsection;
   @include tablet {
@@ -49,7 +48,7 @@
       }
       &__links {
         margin: 2rem 0rem;
-        @include display-flex(row, center, center);
+        @include display-flex(row, space-evenly, center);
         @include tablet {
           @include display-flex(row, flex-start, center);
           margin: 2rem 0rem 0rem 0rem;
@@ -58,18 +57,34 @@
       &__link {
         border-radius: 50%;
         @include display-flex(row, center, center);
-        margin: 0rem 1rem;
+        margin: 0rem 0.5rem;
+        transition: 0.3s;
         &:hover {
           cursor: pointer;
-          filter: invert(29%) sepia(89%) saturate(7288%) hue-rotate(250deg)
-            brightness(100%) contrast(102%);
         }
         &:active {
           transform: scale(0.95);
         }
+        &--resume {
+          text-decoration: none;
+          background-color: $primary-accent;
+          &:hover {
+            transform: scale(1.1);
+          }
+          &:active {
+            transform: scale(0.95);
+          }
+          .infoCard__cv {
+            height: 40px;
+            width: 40px;
+            color: white;
+            @include display-flex(row,center,center);
+          }
+        }
       }
       &__img {
         width: 40px;
+        transition: 0.3s;
         filter: invert(24%) sepia(74%) saturate(4280%) hue-rotate(229deg)
           brightness(92%) contrast(95%);
         &:hover {

@@ -10,6 +10,7 @@
       @include subtitle;
       @include display-flex(row, center, center);
       @include h2Size;
+      margin-top: 2rem;
     }
     &-list {
       margin-top: 1rem;

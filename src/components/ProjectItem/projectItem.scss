@@ -8,6 +8,7 @@
     cursor: pointer;
     border-radius: 8px;
     margin-bottom: 2rem;
+    transition: 0.3s;
     @include tablet {
       width: 75%;
     }
@@ -38,8 +39,8 @@
   &__name {
     @include h3Size;
     margin-right: 1rem;
+    transition: 0.3s;
     &:hover {
-      transition: 0.3s;
       font-weight: 500;
       cursor: pointer;
     }
@@ -50,8 +51,8 @@
     color: white;
     border-radius: 8px;
     padding: 0.35rem;
+    transition: 0.3s;
     &:hover {
-      transition: 0.3s;
       font-weight: bold;
     }
   }
@@ -68,12 +69,12 @@
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 8px;
+    transition: 0.3s;
     @include tablet {
       border: none;
       padding: 0rem;
     }
     &:hover {
-      transition: 0.3s;
       font-weight: bold;
     }
     &:active {
