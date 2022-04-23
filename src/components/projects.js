@@ -1,5 +1,6 @@
 import stonkersImg from "../assets/images/stonkers-homepage.png";
 import instockImg from "../assets/images/instock-warehouses.png";
+import mastermindImg from "../assets/images/mastermind.png";
 
 const Project = (name, img, year, demo, code, desc) => {
   const getName = () => name;
@@ -35,6 +36,17 @@ const instock = Project(
    to React logic, to building some React components for the frontend including styling with SASS.`
 );
 
-const projects = [stonkers, instock];
+const mastermind = Project(
+  "Mastermind",
+  mastermindImg,
+  2021,
+  "https://replit.com/@simonmilord/mastermindRuby",
+  "https://github.com/SimonMilord/mastermind_Ruby",
+  `My ruby version of the classic code breaking game Mastermind! It allows the user to play Mastermind against the computer, as
+  the code breaker. And yes, I have lost against my own program. The game is played in the command line and the demo is hosted
+  on Replit, a browser based IDE.`
+);
+
+const projects = [stonkers, instock, mastermind];
 
 export default projects;
