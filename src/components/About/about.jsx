@@ -13,9 +13,9 @@ export default function About(props) {
       <div className="info">
         <div className="infoCard">
           <p className="infoCard__aboutme infoCard__aboutme--1">
-            For as long as I can remember, I've loved solving problems - from
+            For as long as I can remember, I've loved solving problems. From
             programming Lego robots as a kid to playing real-time strategy games
-            and building my own PC as a teenager to deciphering complex quant
+            and building my own PC as a teenager to solving complex quant
             equations as an adult.
           </p>
           <p className="infoCard__aboutme infoCard__aboutme--2">
@@ -28,9 +28,10 @@ export default function About(props) {
             Development Bootcamp to further hone my skills.
           </p>
           <p className="infoCard__aboutme infoCard__aboutme--3">
-            I am now looking for new challenges and I am thrilled by the fact
-            that there will always be more opportunities to solve problems, to
-            build new things and above all to learn!
+            I am now seeking new challenges and I am thrilled to continue to
+            solve problems, to build new things and especially to learn! I am
+            confident my rich domain expertise in Finance combined with my tech
+            knowledge provides me with a unique skill set.
           </p>
           <div className="infoCard__links">
             <Link to="/linkedin" className="infoCard__link">

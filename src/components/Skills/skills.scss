@@ -17,7 +17,6 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     row-gap: 2rem;
-    transition: 0.3s all ease;
     margin: 2rem 0rem;
     @include tablet {
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -26,6 +25,7 @@
     &__item {
       @include display-flex(row,center,center);
       justify-items: center;
+      transition: 0.3s all ease;
       &:hover {
         transform: scale(1.2);
       }
