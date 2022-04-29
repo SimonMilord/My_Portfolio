@@ -11,12 +11,9 @@
     transition: 0.3s;
     max-height: 369px;
     max-width: 657px;
-    // @include tablet {
-    //   width: 75%;
-    // }
+
     &:hover {
       transform: scale(1.05);
-      // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
     &:active {
