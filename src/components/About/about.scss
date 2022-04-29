@@ -3,16 +3,24 @@
 
 .about {
   @include wrapper;
-  height: 100vh;
+  // height: 100vh;
   @include display-flex(column, center, center);
   @include paddingsection;
   @include tablet {
-    color: black;
     height: 100vh;
+  }
+  &__title {
+    @include subtitle;
+    @include display-flex(row, center, center);
+    @include h2Size;
+    @include tablet {
+      margin-bottom: 2rem;
+    }
   }
 
   .info {
     width: 100%;
+    color: black;
     @include tablet {
       padding: 2rem;
       background-color: $modal-background;
@@ -38,14 +46,7 @@
           line-height: 1.5;
         }
       }
-      &__title {
-        @include subtitle;
-        @include display-flex(row, center, center);
-        @include h2Size;
-        @include tablet {
-          margin-bottom: 2rem;
-        }
-      }
+
       &__links {
         margin: 2rem 0rem;
         @include display-flex(row, space-evenly, center);

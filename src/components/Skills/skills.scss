@@ -1,0 +1,34 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.skills {
+  @include display-flex(column,center,center);
+  @include paddingsection;
+
+  &-title {
+    @include subtitle;
+    @include h2Size;
+    @include display-flex(row, center, center);
+  }
+
+  .grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 2rem;
+    transition: 0.3s all ease;
+    margin: 2rem 0rem;
+    @include tablet {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    &__item {
+      @include display-flex(row,center,center);
+      justify-items: center;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

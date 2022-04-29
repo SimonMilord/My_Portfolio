@@ -9,9 +9,9 @@ import Email from "../../assets/icons/email.svg";
 export default function About(props) {
   return (
     <div className="about">
+        <h2 className="about__title">About me</h2>
       <div className="info">
         <div className="infoCard">
-          <h2 className="infoCard__title">About me</h2>
           <p className="infoCard__aboutme infoCard__aboutme--1">
             For as long as I can remember, I've loved solving problems - from
             programming Lego robots as a kid to playing real-time strategy games

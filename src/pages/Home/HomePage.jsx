@@ -6,6 +6,7 @@ import About from "../../components/About/about";
 import ProjectsList from "../../components/ProjectsList/projectsList";
 import Contact from "../../components/Contact/contact";
 import Footer from "../../components/Footer/footer";
+import Skills from "../../components/Skills/skills";
 import { Element } from "react-scroll";
 
 export default function HomePage(props) {
@@ -31,6 +32,7 @@ export default function HomePage(props) {
       <Element name="about" id="about" className="section">
         <About />
       </Element>
+        <Skills />
       <Element name="projects" id="projects" className="section">
         <ProjectsList />
       </Element>
