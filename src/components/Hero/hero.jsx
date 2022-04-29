@@ -9,8 +9,7 @@ function Hero(props) {
         <div className="hero__text">
           <span className="hero__intro">Hi, my name is</span>
           <h1 className="hero__title">Simon Milord</h1>
-          {/* <h2 className="hero__subtitle">Web developer</h2> */}
-          <h2 className="hero__subtitle">From Trading to Coding</h2>
+          <h2 className="hero__subtitle">Web developer</h2>
           <div className="hero__desc">
             <p className="hero__desc-content">
               {" "}
