@@ -63,21 +63,7 @@
       }
     }
     &__btn {
-      border-radius: 8px;
-      cursor: pointer;
-      background-color: $primary-accent;
-      color: white;
-      font-size: 16px;
-      border: none;
-      padding: 0.7rem 2.5rem;
-      margin: 1rem 0rem;
-      transition: 0.3s;
-      &:hover {
-        background-color: $secondary-accent;
-      }
-      &:active {
-        transform: scale(0.95);
-      }
+      @include btn;
     }
   }
 }

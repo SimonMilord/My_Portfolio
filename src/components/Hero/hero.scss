@@ -2,7 +2,7 @@
 @import "../../styles/partials/variables";
 
 .hero {
-  height: 92vh;
+  // height: 92vh;
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
@@ -14,6 +14,13 @@
   @include desktop {
     @include display-flex(row, flex-start, center);
     padding: 0rem 4rem;
+  }
+
+  &-top {
+    width: 100%;
+    @include desktop {
+      @include display-flex(row, center, center);
+    }
   }
 
   &__text {
@@ -125,6 +132,29 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
     @include desktop {
       max-height: 700px;
+    }
+  }
+  &__btn-box {
+    display: none;
+    @include desktop {
+      display: flex;
+      width: 100%;
+      margin: 20px 0px;
+      @include display-flex(row, flex-start, center);
+      a {
+        @include btn;
+      }
+    }
+  }
+  .btn {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__btn--mobile {
+    @include btn;
+    @include desktop {
+      display: none;
     }
   }
 }
