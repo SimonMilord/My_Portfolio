@@ -18,17 +18,17 @@ const Darkmode = (props) => {
     body.classList.add(lightTheme);
   }
 
-  const  switchTheme = (e) => {
+  const  switchTheme = async(e) => {
     if (theme === darkTheme) {
+      await setTheme(lightTheme);
       body.classList.replace(darkTheme, lightTheme);
       e.target.classList.remove(clickedClass);
       localStorage.setItem("theme", "light");
-      setTheme(lightTheme);
     } else {
+      await setTheme(darkTheme);
       body.classList.replace(lightTheme, darkTheme);
       e.target.classList.add(clickedClass);
       localStorage.setItem("theme", "dark");
-      setTheme(darkTheme);
     }
     props.getTheme(theme);
   };
