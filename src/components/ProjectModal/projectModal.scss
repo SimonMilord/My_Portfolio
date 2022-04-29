@@ -2,7 +2,8 @@
 @import "../../styles/partials/variables";
 
 .modal-container {
-  position: fixed;
+  // position: fixed;
+  position: absolute;
   top: 0rem;
   left: 0rem;
   right: 0rem;
@@ -16,43 +17,39 @@
   }
 
   .modal {
-    @include display-flex(column, center, center);
+    @include display-flex(column, space-between, center);
     background-color: $modal-background;
     position: fixed;
-    width: 80%;
-    height: 80%;
-    padding: 1rem;
+    width: 90%;
+    min-height: 80%;
+    padding: 2rem 1rem;
     margin: 0;
     border-radius: 30px;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     @include tablet {
+      top: 50%;
       padding: 2rem;
     }
     @include desktop {
       width: 60%;
-      height: 80%;
+      min-height: 80%;
     }
 
+    &__btn-box {
+      width: 100%;
+      @include display-flex(row,flex-end, center);
+    }
     #modal__closeBtn {
-      position: absolute;
-      right: 25px;
-      width: 50px;
-      height: 50px;
-      top: 25px;
       font-size: 2rem;
       box-shadow: none;
       border: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-color: $modal-background;
     }
     &__imgBox {
       width: 100%;
       margin-right: 0;
-      margin-bottom: 15px;
       display: flex;
       justify-content: center;
       @include tablet {
@@ -65,7 +62,7 @@
     &__img {
       border-radius: 8px;
       width: 100%;
-      margin-bottom: 1.5rem;
+      margin: 1.5rem 0rem;
       @include tablet {
         max-height: 300px;
         max-width: 575px;
@@ -75,6 +72,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
     }
     &__title {
       font-size: 2rem;
@@ -89,6 +87,7 @@
     }
     &__links {
       width: 100%;
+      max-width: 500px;
       @include display-flex(row, space-between, center);
     }
     &__link {

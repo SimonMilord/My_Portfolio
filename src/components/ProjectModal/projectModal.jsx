@@ -12,11 +12,13 @@ function ProjectModal(props) {
   });
 
   return (
-    <div className="modal-container">
-      <div className="modal">
-        <button id="modal__closeBtn" onClick={closeModal}>
-          X
-        </button>
+    <div className="modal-container" onClick={closeModal}>
+      <div className="modal" onClick={e => e.stopPropagation()}>
+        <div className="modal__btn-box">
+          <button id="modal__closeBtn" onClick={closeModal}>
+            X
+          </button>
+        </div>
         <div className="modal__imgBox">
           <img
             src={project.getImg()}
