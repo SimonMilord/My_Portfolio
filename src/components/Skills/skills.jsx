@@ -23,40 +23,64 @@ function Skills(props) {
       <h2 className="skills-title">Skills</h2>
       <div className="grid">
         <div className="grid__item">
-          <SiHtml5 color="#F16529" size={iconSize} />
+          <a className="grid__link" href="https://html.spec.whatwg.org/">
+            <SiHtml5 color="#F16529" size={iconSize} />
+          </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://www.w3.org/Style/CSS/Overview.en.html">
           <SiCss3 color="#2965f1" size={iconSize} />
+        </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://sass-lang.com/">
           <SiSass color="#cc6699" size={iconSize} />
+        </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://www.javascript.com/">
           <SiJavascript color="#f0db4f" size={iconSize} />
+        </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://www.mongodb.com/">
           <SiMongodb color="#589636" size={iconSize} />
+        </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://expressjs.com/">
           <SiExpress color="#999" size={iconSize} />
+        </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://reactjs.org/">
           <SiReact color="#88dded" size={iconSize} />
+        </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://nodejs.dev/">
           <SiNodedotjs color="#68a063" size={iconSize} />
+        </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://git-scm.com/">
           <SiGit color="#f34f29" size={iconSize} />
+        </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://www.ruby-lang.org/en/">
           <SiRuby color="#D30001" size={iconSize} />
+        </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://www.postman.com/">
           <SiPostman color="#FF6C37" size={iconSize} />
+        </a>
         </div>
         <div className="grid__item">
+        <a className="grid__link" href="https://www.mysql.com/">
           <SiMysql color="#008bb9" size={iconSize} />
+        </a>
         </div>
       </div>
     </div>
