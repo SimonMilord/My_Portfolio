@@ -23,12 +23,20 @@
     }
 
     &__item {
-      @include display-flex(row,center,center);
+      @include display-flex(column,center,center);
       justify-items: center;
       transition: 0.3s all ease;
       &:hover {
         transform: scale(1.2);
       }
+    }
+    &__span {
+      visibility: hidden;
+      margin-bottom: 0.5rem;
+      font-size: 12px;
+    }
+    &__item:hover span {
+      visibility: visible;
     }
   }
 }
