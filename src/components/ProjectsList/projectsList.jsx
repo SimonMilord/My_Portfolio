@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
 import "./projectsList.scss";
 import ProjectItem from "../ProjectItem/projectItem";
 import projects from "../projects";
@@ -33,6 +34,11 @@ function ProjectsList(props) {
         </ul>
       </div>
       <ProjectModal project={project} vis={vis} closeModal={closeModal} />
+      <div className="projects-bottom">
+        <Link to="/bits">
+          <button className="projects-bitsbtn">More fun stuff!</button>
+        </Link>
+      </div>
     </div>
   );
 }

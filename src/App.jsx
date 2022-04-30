@@ -2,7 +2,7 @@ import "./App.scss";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/Home/HomePage";
-import MobileNav from "./components/MobileNav/mobileNav";
+import BitsPage from "./pages/Bits/BitsPage";
 
 function App() {
   return (
@@ -14,6 +14,11 @@ function App() {
               path="/"
               exact
               render={(routerProps) => <HomePage {...routerProps} />}
+            />
+            <Route
+              path="/bits"
+              exact
+              render={(routerProps) => <BitsPage {...routerProps} />}
             />
             <Route
               path="/github"
@@ -46,7 +51,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-      <MobileNav />
     </>
   );
 }
