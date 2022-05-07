@@ -81,14 +81,32 @@
     transform: scale(0.95);
   }
 }
+@mixin backgroundAnimation {
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
 
-@mixin gradient {
-  background: linear-gradient(
-    45deg,
-    #23d5ab,
-    #23a6d5,
-    #4379ff,
-    #2B4EE6,
-    #5433FF
-  );
+
+// Components mixins
+@mixin backgroundGradient {
+background: linear-gradient(
+  38deg,
+  #23d5ab,
+  #23a6d5,
+  #4379ff,
+  #2B4EE6,
+  #5433FF
+);
+background-size: 400% 400%;
+animation: gradient 10s ease infinite;
+@include backgroundAnimation;
 }
