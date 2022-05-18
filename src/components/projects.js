@@ -1,4 +1,5 @@
 import stonkersImg from "../assets/images/stonkers-homepage.png";
+import botpediaImg from "../assets/images/bot-pedia.png";
 import instockImg from "../assets/images/instock-warehouses.png";
 import mastermindImg from "../assets/images/mastermind.png";
 
@@ -24,6 +25,18 @@ const stonkers = Project(
   a simple to use interface to help them keep an eye on their investments. `
 );
 
+const botpedia = Project(
+  "Bot-pedia",
+  botpediaImg,
+  2022,
+  "https://bot-pedia.netlify.app/",
+  "https://github.com/SimonMilord/Shopify-intern-challenge-fall2022",
+  `Bot-pedia is a web app that I built for the Shopify 2022 Internship challenge. It gives users the option to choose
+  between 2 bots: Awesom-O (answers sarcastically based on his mood) and Jarvis (gives you right answers). It was built using
+  React and leveraged the Open AI GPT-3 API. The requirements were to have a form make the API call and to display the
+  prompts and answers in a list.`
+);
+
 const instock = Project(
   "InStock",
   instockImg,
@@ -47,6 +60,6 @@ const mastermind = Project(
   on Replit, a browser based IDE.`
 );
 
-const projects = [stonkers, instock, mastermind];
+const projects = [stonkers, botpedia, instock, mastermind];
 
 export default projects;

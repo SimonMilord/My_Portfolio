@@ -41,10 +41,6 @@
     @include h3Size;
     margin-right: 1rem;
     transition: 0.3s;
-    &:hover {
-      font-weight: 500;
-      cursor: pointer;
-    }
   }
   &__year {
     font-size: 12px;
@@ -53,9 +49,6 @@
     border-radius: 8px;
     padding: 0.35rem;
     transition: 0.3s;
-    &:hover {
-      font-weight: bold;
-    }
   }
   &__bottom {
     width: 100%;

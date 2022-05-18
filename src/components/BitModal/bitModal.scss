@@ -48,15 +48,15 @@
     }
     &__imgBox {
       width: 100%;
-      // max-width: 500px;
       margin-right: 0;
       display: flex;
       justify-content: center;
+      margin: 1rem 0rem;
       @include tablet {
         width: 75%;
       }
       @include desktop {
-        width: 60%;
+        width: 70%;
       }
     }
     &__img {
