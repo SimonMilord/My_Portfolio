@@ -1,6 +1,7 @@
 import googleImg from "../assets/images/google.png";
 import etchasketchImg from "../assets/images/etchasketch.png";
 import libraryImg from "../assets/images/libTracker.png";
+import spacestagramImg from "../assets/images/spacestagram.png";
 
 const Bit = (name, img, year, demo, code, desc) => {
   const getName = () => name;
@@ -46,6 +47,18 @@ const libraryTracker = Bit(
   The next steps will be to add a backend.`
 );
 
-const bits = [libraryTracker, etchaSketch, google ];
+const spacestagram = Bit(
+  "Spacestagram",
+  spacestagramImg,
+  2022,
+  "https://anotherspacestagram.netlify.app/",
+  "https://github.com/SimonMilord/Spacestagram",
+  `This is a small project I made to practice for the Shopify internship coding challenge.
+  It's an application that displays ten random images from the NASA picture of the day API.
+  It was built using React and features a loading state, the option to like a post and a button
+  to generate more posts.`
+);
+
+const bits = [spacestagram, libraryTracker, etchaSketch, google ];
 
 export default bits;
