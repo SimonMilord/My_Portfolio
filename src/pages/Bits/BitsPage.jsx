@@ -1,5 +1,5 @@
 import "./BitsPage.scss";
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import BitsList from "../../components/BitsList/bitsList";
 
 function BitsPage(props) {

@@ -5,6 +5,7 @@ import HomePage from "./pages/Home/HomePage";
 import BitsPage from "./pages/Bits/BitsPage";
 
 function App() {
+
   return (
     <>
       <Router>

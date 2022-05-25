@@ -15,7 +15,7 @@ export default function HomePage(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+  },[])
 
   const handleTheme = (value) => {
     setTheme(value);
@@ -24,7 +24,7 @@ export default function HomePage(props) {
   return (
     <div className="homepage">
       <Element name="header" id="header">
-        <Header getTheme={handleTheme} theme={theme}/>
+        <Header theme={theme} getTheme={handleTheme} defaultTheme={props.defaultTheme}/>
       </Element>
       <Hero />
       <Element name="about" id="about" className="section">
