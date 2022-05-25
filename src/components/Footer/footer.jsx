@@ -13,14 +13,10 @@ export default function Footer(props) {
   let [theme, setTheme] = useState("light");
 
   useEffect(()=> {
-    setTheme(localStorage.getItem('theme'))
-  }, [])
-
-  useEffect(()=> {
     if(localStorage.getItem('theme')) {
       setTheme(localStorage.getItem('theme'))
     }
-  }, [props.theme])
+  }, [props.theme], [])
 
   return (
     <div className="footer">
