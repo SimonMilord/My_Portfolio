@@ -4,7 +4,6 @@
 .footer {
   height: 25vh;
   position: relative;
-  @include backgroundGradient;
   @include paddingsection;
   @include display-flex(row, space-between, center);
   width: 100%;
@@ -31,16 +30,13 @@
   }
   &__link {
     margin-right: 1rem;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
-      brightness(103%) contrast(103%);
+    filter: invert(31%) sepia(98%) saturate(5780%) hue-rotate(230deg) brightness(94%) contrast(92%);
     &:hover {
-      filter: invert(90%) sepia(0%) saturate(336%) hue-rotate(157deg)
-        brightness(102%) contrast(79%);
+      filter: invert(19%) sepia(52%) saturate(5077%) hue-rotate(246deg) brightness(107%) contrast(112%);
     }
   }
   &__copyright {
     font-size: 14px;
-    color: white;
   }
 
   &__topBtn {
