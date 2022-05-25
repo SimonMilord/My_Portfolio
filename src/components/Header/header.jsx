@@ -91,6 +91,7 @@ export default function Header(props) {
           <button
             className={theme === "dark" ? "darkMode" : "lightMode"}
             id="darkMode"
+            aria-label="themeToggle"
             onClick={(e) => switchTheme(e)}
           ></button>
         </div>

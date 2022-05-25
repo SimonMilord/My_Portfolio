@@ -15,10 +15,11 @@ export default function HomePage(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  },[])
+    // setTheme
+  },[], [theme])
 
-  const handleTheme = (value) => {
-    setTheme(value);
+  const handleTheme = async(value) => {
+    await setTheme(value);
   }
 
   return (

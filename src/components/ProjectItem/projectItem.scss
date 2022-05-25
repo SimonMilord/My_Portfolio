@@ -4,13 +4,17 @@
 .projectcard {
   @include display-flex(column, center, center);
   &__img {
-    width: 100%;
+    // width: 100%;
     cursor: pointer;
     border-radius: 8px;
     margin-bottom: 2rem;
     transition: 0.3s;
+    display: block;
     max-height: 369px;
     max-width: 657px;
+    // max-width: 100%;
+    height: auto;
+    width: auto;
 
     &:hover {
       transform: scale(1.05);
