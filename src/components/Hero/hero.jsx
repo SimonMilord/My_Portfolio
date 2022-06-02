@@ -13,7 +13,7 @@ function Hero(props) {
           <div className="hero__desc">
             <p className="hero__desc-content">
               {" "}
-              I'm a developer from Canada with a background in finance and a
+              I'm a developer from Montreal with a background in finance and a
               keen interest in Fintech. I'm also a CFA charter holder and was an
               investment advisor in my past life!
             </p>
