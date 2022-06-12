@@ -12,7 +12,7 @@ import {
   SiGit,
   SiRuby,
   SiPostman,
-  SiMysql,
+  SiTypescript,
 } from "react-icons/si";
 
 const iconSize = "50px";
@@ -89,9 +89,9 @@ function Skills(props) {
         </a>
         </div>
         <div className="grid__item">
-        <span className="grid__span">MySQL</span>
-        <a className="grid__link" aria-label="MySQL" href="https://www.mysql.com/">
-          <SiMysql color="#008bb9" size={iconSize} />
+        <span className="grid__span">TypeScript</span>
+        <a className="grid__link" aria-label="TypeScript" href="https://www.typescriptlang.org/">
+          <SiTypescript color="#008bb9" size={iconSize} />
         </a>
         </div>
       </div>
