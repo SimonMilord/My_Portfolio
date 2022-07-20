@@ -1,4 +1,5 @@
 import stonkersImg from "../assets/images/stonkers-homepage.png";
+import sadhikaImg from "../assets/images/sadhikapf.png";
 import botpediaImg from "../assets/images/bot-pedia.png";
 import instockImg from "../assets/images/instock-warehouses.png";
 import mastermindImg from "../assets/images/mastermind.png";
@@ -23,6 +24,16 @@ const stonkers = Project(
   It also allows them to add stocks to their watchlist. It was built using the MERN stack, Chart.JS and JWT.
   It features databases, server-side authentication and the use of API data. The app seeks to provide beginners and new investors
   a simple to use interface to help them keep an eye on their investments. `
+);
+
+const sadhikapf = Project(
+  "UX Designer Portfolio",
+  sadhikaImg,
+  2022,
+  "https://billadesigns.com/",
+  "https://github.com/SimonMilord/sadhika-portfolio",
+  `This is a portfolio website I made as a freelance project for a Shopify Senior UX designer.
+  I built the site with React and SCSS.`
 );
 
 const botpedia = Project(
@@ -60,6 +71,6 @@ const mastermind = Project(
   on Replit, a browser based IDE.`
 );
 
-const projects = [stonkers, botpedia, instock, mastermind];
+const projects = [stonkers, sadhikapf, botpedia, instock, mastermind];
 
 export default projects;
