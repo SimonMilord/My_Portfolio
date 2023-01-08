@@ -1,0 +1,30 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.projects-box {
+  @include wrapper;
+  @include paddingsection;
+  .projects {
+    &-title {
+      @include subtitle;
+      @include display-flex(row, center, center);
+      @include h2Size;
+      margin-top: 2rem;
+    }
+    &-list {
+      margin-top: 1rem;
+      @include tablet {
+        margin-top: 2rem;
+      }
+    }
+    .project {
+      padding: 2.5rem 0rem;
+    }
+  }
+  .projects-bottom {
+    @include display-flex(row,center,center);
+    .projects-bitsbtn {
+      @include btn;
+    }
+  }
+}

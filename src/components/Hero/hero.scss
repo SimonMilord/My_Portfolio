@@ -1,0 +1,147 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.hero {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  @include paddingsection;
+  @include display-flex(column, flex-start, center);
+  @include tablet {
+    @include display-flex(column, flex-start, center);
+  }
+  @include desktop {
+    @include display-flex(row, flex-start, center);
+    padding: 0rem 4rem;
+  }
+
+  &-top {
+    width: 100%;
+    @include desktop {
+      @include display-flex(row, center, center);
+    }
+  }
+
+  &__text {
+    width: 100%;
+    @include display-flex(column, flex-start, center);
+    @include desktop {
+      width: 60%;
+      height: 100%;
+      @include display-flex(column, center, center);
+      margin-bottom: 20rem;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 500;
+    @include display-flex(row, center, center);
+    @include tablet {
+      width: 100%;
+      font-size: 52px;
+    }
+    @include desktop {
+      @include display-flex(row, flex-start, center);
+      font-size: 68px;
+    }
+  }
+  &__subtitle {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $primary-accent;
+    @include display-flex(row, center, center);
+    @include tablet {
+      width: 100%;
+      font-size: 28px;
+    }
+    @include desktop {
+      @include display-flex(row, flex-start, center);
+      font-size: 32px;
+    }
+  }
+  &__desc {
+    @include display-flex(row, center, center);
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top: 20px;
+    @include tablet {
+      width: 100%;
+      font-size: 22px;
+    }
+    @include desktop {
+      @include display-flex(row, flex-start, center);
+    }
+    &-content {
+      max-width: 550px;
+      @include tablet {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+
+  &__img-box {
+    width: 100%;
+    position: relative;
+    min-height: 250px;
+    @include display-flex(row, center, center);
+    @include desktop {
+      width: 40%;
+      height: 100%;
+      @include display-flex(row, center, center);
+      margin-bottom: 20rem;
+    }
+  }
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-height: 500px;
+    min-height: 250px;
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: float 7s ease-in-out infinite;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    @include desktop {
+      max-height: 700px;
+    }
+  }
+  &__btn-box {
+    display: none;
+    @include desktop {
+      display: flex;
+      width: 100%;
+      margin: 20px 0px;
+      @include display-flex(row, flex-start, center);
+      a {
+        @include btn;
+      }
+    }
+  }
+  .btn {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__btn--mobile {
+    @include btn;
+    @include desktop {
+      display: none;
+    }
+  }
+}

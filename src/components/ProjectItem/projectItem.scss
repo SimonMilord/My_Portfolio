@@ -1,0 +1,83 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.projectcard {
+  @include display-flex(column, center, center);
+  &__img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+    display: block;
+    max-height: 369px;
+    max-width: 657px;
+    object-fit: cover;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    &:active {
+      transform: scale(1);
+    }
+  }
+  &__info {
+    width: 70%;
+    @include display-flex(column, center, center);
+    @include tablet {
+      @include display-flex(row, center, center);
+    }
+  }
+  &__top {
+    width: 100%;
+    @include display-flex(row, flex-start, center);
+    margin-bottom: 1rem;
+    @include tablet {
+      margin-bottom: 2rem;
+      width: 75%;
+      @include display-flex(row, flex-start, center);
+    }
+  }
+  &__name {
+    @include h3Size;
+    margin-right: 1rem;
+    transition: 0.3s;
+  }
+  &__year {
+    font-size: 12px;
+    background-color: $primary-accent;
+    color: white;
+    border-radius: 8px;
+    padding: 0.35rem;
+    transition: 0.3s;
+  }
+  &__bottom {
+    width: 100%;
+    @include display-flex(row, center, center);
+    @include tablet {
+      width: 50%;
+      @include display-flex(row, center, center);
+    }
+  }
+  &__link {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: 0.3s;
+    @include tablet {
+      border: none;
+      padding: 0rem;
+    }
+    &:hover {
+      font-weight: bold;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+    &--demo {
+      margin-right: 2rem;
+    }
+  }
+}

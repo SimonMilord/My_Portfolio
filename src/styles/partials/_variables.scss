@@ -1,0 +1,27 @@
+@use "./fonts" as*;
+
+// width dimensions
+$wrapper: 1500px;
+$tablet-width: 768px;
+$desktop-width: 1280px;
+
+// fonts variables
+$main-font-regular: "Roboto", sans-serif;
+
+// darkmode variables
+$dm-font-color: #fff;
+$dm-background-color: #000;
+
+// lightmode variables
+$lm-font-color: #000;
+$lm-background-color: #fff;
+
+// colors
+
+$modal-background: #f2f2f2;
+$input-bg: #f2f2f2;
+
+$primary-accent: #2B4EE6;
+$secondary-accent: #5433FF;
+
+$wave-color: rgb(43, 78, 230, 1);

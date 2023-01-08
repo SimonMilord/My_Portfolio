@@ -1,0 +1,140 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.header {
+  @include paddingsection;
+  @include display-flex(row, flex-end, center);
+  height: 18vh;
+  margin-bottom: 1rem;
+  position: relative;
+  @include backgroundGradient;
+  @include tablet {
+    height: 22vh;
+  }
+  @include desktop {
+    height: 22vh;
+  }
+
+  .header-wave {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .header-wave svg {
+    position: relative;
+    display: block;
+    width: calc(120% + 1.3px);
+    height: 100px;
+  }
+
+  .header-wave .shape-fill {
+    fill: #ffffff;
+    transition: 0.3s;
+  }
+  .header-wave .shape-fill--dark {
+    fill: #000000;
+    transition: 0.3s;
+  }
+
+  /** For tablet devices **/
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .header-wave svg {
+      width: calc(125% + 1.3px);
+      height: 100px;
+    }
+  }
+
+  /** For mobile devices **/
+  @media (max-width: 767px) {
+    .header-wave svg {
+      width: calc(120% + 1.3px);
+      height: 55px;
+    }
+  }
+
+  &-rightBox {
+    height: 100%;
+    @include display-flex(row,center,flex-start);
+    position: relative;
+  }
+  &-right {
+    @include display-flex(row, center, center);
+    position: relative;
+    z-index: 999;
+    .nav {
+      display: none;
+      @include tablet {
+        height: 100%;
+        display: flex;
+      }
+      &__list {
+        @include display-flex(row, flex-end, center);
+      }
+      &__item {
+        margin: 0rem 0.5rem;
+      }
+      &__link {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          font-weight: bold;
+          font-size: 24px;
+          // color: lightgrey;
+        }
+      }
+    }
+  }
+
+  .darkMode {
+    margin-left: 1rem;
+    background: white url("../../assets/icons/moon.png") no-repeat center;
+    background-size: 30px 30px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    &:hover {
+      background-color: lightgrey;
+      filter: none;
+      cursor: pointer;
+    }
+    &:active {
+      transition: none;
+    }
+    &.clicked {
+      filter: none !important;
+    }
+  }
+
+  .lightMode {
+    margin-left: 1rem;
+    background: white url("../../assets/icons/sun.png") no-repeat center;
+    background-size: 30px 30px;
+    width: 45px;
+    height: 45px;
+    filter: grayscale(100%);
+    border: none;
+    border-radius: 50%;
+    &:hover {
+      background-color: lightgray;
+      filter: none;
+      cursor: pointer;
+    }
+    &:active {
+      transition: none;
+    }
+    &.clicked {
+      filter: none !important;
+    }
+  }
+}

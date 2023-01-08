@@ -1,0 +1,112 @@
+@import './variables';
+
+// media queries
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1100px) {
+    @content;
+  }
+}
+
+// general mixins:
+
+@mixin display-flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin paddingsection {
+  padding: 1rem 2rem;
+  @include tablet {
+    padding: 2rem 3rem;
+  }
+  @include desktop {
+    padding: 3rem 4rem;
+  }
+}
+
+@mixin subtitle {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@mixin wrapper {
+  max-width: $wrapper;
+  margin: 0 auto;
+}
+
+// font sizes
+
+@mixin h2Size {
+  font-size: 32px;
+  @include tablet {
+    font-size: 40px;
+  }
+  @include desktop {
+    font-size: 48px;
+  }
+}
+
+@mixin h3Size {
+  font-size: 24px;
+  @include tablet {
+    font-size: 32px;
+  }
+  @include desktop {
+    font-size: 40px;
+  }
+}
+
+@mixin btn {
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: $primary-accent;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 0.7rem 2.5rem;
+  margin: 1rem 0rem;
+  transition: 0.3s;
+  &:hover {
+    background-color: $secondary-accent;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+@mixin backgroundAnimation {
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+
+// Components mixins
+@mixin backgroundGradient {
+background: linear-gradient(
+  38deg,
+  #23d5ab,
+  #23a6d5,
+  #4379ff,
+  #2B4EE6,
+  #5433FF
+);
+background-size: 400% 400%;
+animation: gradient 10s ease infinite;
+@include backgroundAnimation;
+}

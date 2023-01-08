@@ -1,0 +1,94 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.contact {
+  @include wrapper;
+  height: 75vh;
+  @include paddingsection;
+  @include display-flex(column, center, center);
+  &-title {
+    @include subtitle;
+    @include h2Size;
+    @include display-flex(row, center, center);
+  }
+  &-subtitle {
+    margin: 1rem 0rem;
+    font-size: 25px;
+    a {
+      color: $primary-accent !important;
+    }
+  }
+  &__links {
+    @include display-flex(row, center, center);
+    margin-top: 1rem;
+  }
+  &__link {
+    margin: 0rem 1rem;
+    filter: invert(31%) sepia(98%) saturate(5780%) hue-rotate(230deg) brightness(94%) contrast(92%);
+    &:hover {
+      filter: invert(19%) sepia(52%) saturate(5077%) hue-rotate(246deg) brightness(107%) contrast(112%);
+    }
+  }
+  &__img {
+    width: 40px;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .emailForm {
+    width: 100%;
+    max-width: 1280px;
+    @include display-flex(column, center, center);
+    &__inputBox {
+      width: 100%;
+      @include tablet {
+        width: 70%;
+      }
+    }
+    &__label {
+      position: relative;
+      position: absolute;
+      pointer-events: none;
+      top: 18px;
+      left: 10px;
+      transition: 0.2s ease all;
+    }
+
+    &__input {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      margin: 0.5rem 0rem;
+      font-size: 16px;
+      border: 2px solid black;
+      border-radius: 8px;
+      transition: all 0.3s ease 0s;
+      outline-color: $primary-accent;
+      background-color: $input-bg;
+      &:hover {
+        border-color: $secondary-accent;
+      }
+      &--message {
+        min-height: 200px;
+        resize: none;
+      }
+      &--invalid {
+        &::placeholder {
+          color: red;
+        }
+      }
+    }
+    &__span {
+      font-size: 14px;
+      &--error {
+        color: red;
+      }
+      &--success {
+        color: $secondary-accent;
+      }
+    }
+    &__btn {
+      @include btn;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.modal-container {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  z-index: 8;
+  margin: 0 auto;
+  overflow-y: hidden;
+  background-color: rgb(0, 0, 0, 0.7);
+  @include desktop {
+    margin: 0 auto;
+  }
+
+  .modal {
+    @include display-flex(column, space-around, center);
+    background-color: $modal-background;
+    position: fixed;
+    width: 90%;
+    min-height: 80%;
+    padding: 2rem 1rem;
+    margin: 0;
+    border-radius: 30px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include tablet {
+      top: 50%;
+      padding: 2rem;
+    }
+    @include desktop {
+      width: 70%;
+      min-height: 80%;
+    }
+
+    &__btn-box {
+      width: 100%;
+      @include display-flex(row,flex-end, center);
+    }
+    #modal__closeBtn {
+      font-size: 2rem;
+      box-shadow: none;
+      border: none;
+      background-color: $modal-background;
+    }
+    &__imgBox {
+      width: 100%;
+      margin-right: 0;
+      display: flex;
+      justify-content: center;
+      @include tablet {
+        width: 75%;
+      }
+      @include desktop {
+        width: 70%;
+      }
+    }
+    &__img {
+      border-radius: 8px;
+      width: 100%;
+      margin: 1.5rem 0rem;
+      object-fit: cover;
+      @include tablet {
+        max-height: 300px;
+        max-width: 575px;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: black;
+    }
+    &__desc {
+      max-width: 500px;
+      line-height: 1.3rem;
+      margin-bottom: 2rem;
+      color: black;
+    }
+    &__links {
+      width: 100%;
+      max-width: 500px;
+      @include display-flex(row, space-between, center);
+    }
+    &__link {
+      font-size: 1rem;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        transition: 0.3s;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+}

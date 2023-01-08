@@ -1,0 +1,40 @@
+@use "./styles/partials/reset" as *;
+@import "./styles/partials/mixins";
+@import "./styles/partials/variables";
+
+* {
+  box-sizing: border-box;
+  font-family: $main-font-regular;
+}
+
+body {
+  position: relative;
+  font-family: $main-font-regular;
+
+  .App {
+    height: 100%;
+    position: relative;
+    margin-bottom: 4rem;
+    @include tablet {
+      margin-bottom: 0rem;
+    }
+  }
+}
+
+body.light {
+  transition: 0.3s;
+  background-color: $lm-background-color;
+  color: $lm-font-color;
+  a {
+    color: $lm-font-color;
+  }
+}
+
+body.dark {
+  transition: 0.3s;
+  background-color: $dm-background-color;
+  color: $dm-font-color;
+  a {
+    color: $dm-font-color;
+  }
+}

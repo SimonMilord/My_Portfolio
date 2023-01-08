@@ -1,0 +1,49 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.skills {
+  @include display-flex(column,center,center);
+  margin: 20rem 0rem;
+  @include paddingsection;
+  height: 100vh;
+  @include tablet {
+    margin: 0rem;
+  }
+  &-title {
+    @include subtitle;
+    @include h2Size;
+    @include display-flex(row, center, center);
+  }
+  &__section {
+    @include display-flex(column, center, center);
+    width: 100%;
+    margin-top: 3rem;
+    @include tablet {
+      @include display-flex(row, space-evenly, center);
+    }
+  }
+  &__table {
+    border: 1px solid $primary-accent;
+    padding: 16px;
+    border-radius: 8px;
+    width: 320px;
+    height: 336px;
+    margin: 1rem 0rem;
+  }
+  &__top {
+    @include display-flex(row, flex-start, center);
+    margin-bottom: 1rem;
+  }
+  &__subtitle {
+    font-size: 24px;
+    padding: 8px;
+  }
+  &__listItem {
+    @include display-flex(row,flex-start,center);
+    font-size: 20px;
+    padding: 0.5rem 0rem;
+    p {
+      margin-left: 0.5rem;
+    }
+  }
+}

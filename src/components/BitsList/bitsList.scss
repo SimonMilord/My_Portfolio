@@ -1,0 +1,33 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.bits-box {
+  @include wrapper;
+  @include paddingsection;
+  .bits {
+    &-top {
+      @include display-flex(column,center,center);
+    }
+    &-title {
+      @include subtitle;
+      @include display-flex(row, center, center);
+      @include h2Size;
+      margin-top: 2rem;
+    }
+    &-list {
+      margin-top: 1rem;
+      @include tablet {
+        margin-top: 2rem;
+      }
+    }
+    .bit {
+      padding: 2.5rem 0rem;
+    }
+  }
+  .bits-bottom {
+    @include display-flex(row,center,center);
+    .bits-homebtn {
+      @include btn;
+    }
+  }
+}
