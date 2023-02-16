@@ -37,12 +37,16 @@ export default function Skills({ theme }) {
           </div>
           <ul className="skills__list">
             <li className="skills__listItem">
-              <SiJavascript color="#f0db4f" />
-              <p>JavaScript</p>
+              <SiTypescript color="#008bb9" />
+              <p>TypeScript</p>
             </li>
             <li className="skills__listItem">
               <SiReact color="#88dded" />
               <p>React</p>
+            </li>
+            <li className="skills__listItem">
+              <SiJavascript color="#f0db4f" />
+              <p>JavaScript</p>
             </li>
             <li className="skills__listItem">
               <SiHtml5 color="#F16529" />
@@ -55,10 +59,6 @@ export default function Skills({ theme }) {
             <li className="skills__listItem">
               <SiSass color="#cc6699" />
               <p>SASS</p>
-            </li>
-            <li className="skills__listItem">
-              <SiTypescript color="#008bb9" />
-              <p>TypeScript</p>
             </li>
             <li className="skills__listItem">
               <BsLightning color="#3568a3" />
@@ -74,6 +74,10 @@ export default function Skills({ theme }) {
           </div>
           <ul className="skills__list">
             <li className="skills__listItem">
+              <SiSalesforce color="#1798c1" />
+              <p>Apex</p>
+            </li>
+            <li className="skills__listItem">
               <SiNodedotjs color="#68a063" />
               <p>Node JS</p>
             </li>
@@ -82,12 +86,12 @@ export default function Skills({ theme }) {
               <p>Express</p>
             </li>
             <li className="skills__listItem">
-              <SiRuby color="#D30001" />
-              <p>Ruby</p>
-            </li>
-            <li className="skills__listItem">
               <SiMongodb color="#589636" />
               <p>MongoDB</p>
+            </li>
+            <li className="skills__listItem">
+              <SiRuby color="#D30001" />
+              <p>Ruby</p>
             </li>
           </ul>
         </div>
@@ -103,20 +107,20 @@ export default function Skills({ theme }) {
               <p>Git</p>
             </li>
             <li className="skills__listItem">
-              <SiPostman color="#FF6C37" />
-              <p>Postman</p>
-            </li>
-            <li className="skills__listItem">
-              <SiJira color="#F89D32" />
-              <p>Jira</p>
-            </li>
-            <li className="skills__listItem">
               <SiGithub color="#171515" />
               <p>Github</p>
             </li>
             <li className="skills__listItem">
+              <SiJira color="#0052CC" />
+              <p>Jira</p>
+            </li>
+            <li className="skills__listItem">
               <SiJest color="#C63D14" />
               <p>Jest</p>
+            </li>
+            <li className="skills__listItem">
+              <SiPostman color="#FF6C37" />
+              <p>Postman</p>
             </li>
             <li className="skills__listItem">
               <SiSalesforce color="#1798c1" />
