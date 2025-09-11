@@ -38,13 +38,6 @@ function App() {
               }}
             />
             <Route
-              path="/twitter"
-              component={() => {
-                window.location.replace("https://twitter.com/SimonMilord");
-                return null;
-              }}
-            />
-            <Route
               path="*"
               exact
               render={(routerProps) => <HomePage {...routerProps} />}

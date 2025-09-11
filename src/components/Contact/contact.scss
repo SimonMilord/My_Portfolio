@@ -11,13 +11,6 @@
     @include h2Size;
     @include display-flex(row, center, center);
   }
-  &-subtitle {
-    margin: 1rem 0rem;
-    font-size: 25px;
-    a {
-      color: $primary-accent !important;
-    }
-  }
   &__links {
     @include display-flex(row, center, center);
     margin-top: 1rem;

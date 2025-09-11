@@ -1,17 +1,16 @@
-import React from "react";
 import "./footer.scss";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { Link as ScrollLink } from "react-scroll";
 
 const currentYear = new Date().getFullYear();
 
-export default function Footer(props) {
+export default function Footer() {
 
   return (
     <div className="footer">
       <div className="footer__content">
         <span className="footer__copyright">
-          &copy; {currentYear} Let's not pretend this is copyrighted
+          Simon Milord &copy; {currentYear}
         </span>
       </div>
       <div className="footer__right">
