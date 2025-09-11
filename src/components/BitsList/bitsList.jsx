@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {Link} from "react-router-dom";
 import "./bitsList.scss";
 import BitItem from "../BitItem/bitItem";
@@ -6,7 +6,7 @@ import bits from "../bits";
 import BitModal from "../BitModal/bitModal";
 let uniqid = require("uniqid");
 
-function BitsList(props) {
+function BitsList() {
   const [bit, setBit] = useState(bits[0]);
   const [vis, setVis] = useState(false);
 

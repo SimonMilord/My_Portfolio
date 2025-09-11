@@ -1,7 +1,6 @@
 import stonkersImg from "../assets/images/stonkers-homepage.png";
 import sadhikaImg from "../assets/images/sadhikapf.png";
 import botpediaImg from "../assets/images/bot-pedia.png";
-import instockImg from "../assets/images/instock-warehouses.png";
 
 const Project = (name, img, year, demo, code, desc) => {
   const getName = () => name;
@@ -47,18 +46,5 @@ const botpedia = Project(
   prompts and answers in a list.`
 );
 
-const instock = Project(
-  "InStock",
-  instockImg,
-  2022,
-  "https://instock-demo.netlify.app/",
-  "https://github.com/SimonMilord/instock_client",
-  `InStock is a responsive inventory management application that allows users to keep track of inventories spread across multiple warehouses.
-   It was built as a team project for the Brainstation program where we got to collaborate in an agile development environment using Jira.
-   The app itself was built with React and SASS on the frontend and Node and Express on the backend. My contributions range from backend routing,
-   to React logic, to building some React components for the frontend including styling with SASS.`
-);
-
-const projects = [stonkers, sadhikapf, botpedia, instock];
-
+const projects = [stonkers, sadhikapf, botpedia];
 export default projects;

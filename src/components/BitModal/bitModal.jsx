@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./bitModal.scss";
 
 function BitModal(props) {
