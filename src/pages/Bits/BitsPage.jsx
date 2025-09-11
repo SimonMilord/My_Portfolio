@@ -1,8 +1,8 @@
 import "./BitsPage.scss";
-import React, {useEffect} from "react";
+import {useEffect} from "react";
 import BitsList from "../../components/BitsList/bitsList";
 
-function BitsPage(props) {
+function BitsPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0)

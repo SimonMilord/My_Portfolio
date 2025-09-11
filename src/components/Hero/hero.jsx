@@ -1,4 +1,3 @@
-import React from "react";
 import "./hero.scss";
 import Illustration from "../../assets/images/illustrationHero.svg";
 

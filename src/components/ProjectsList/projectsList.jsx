@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {Link} from "react-router-dom";
 import "./projectsList.scss";
 import ProjectItem from "../ProjectItem/projectItem";
@@ -6,7 +6,7 @@ import projects from "../projects";
 import ProjectModal from "../ProjectModal/projectModal";
 let uniqid = require("uniqid");
 
-function ProjectsList(props) {
+function ProjectsList() {
   const [project, setProject] = useState(projects[0]);
   const [vis, setVis] = useState(false);
 

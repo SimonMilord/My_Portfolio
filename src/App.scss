@@ -10,6 +10,8 @@
 body {
   position: relative;
   font-family: $main-font-regular;
+  background-color: $main-background;
+  color: $font;
 
   .App {
     height: 100%;

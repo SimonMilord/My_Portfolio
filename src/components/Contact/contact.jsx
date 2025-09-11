@@ -1,9 +1,7 @@
 import "./contact.scss";
-import React from "react";
 import { Link } from "react-router-dom";
 import LinkedIn from "../../assets/icons/linkedin.svg";
 import Github from "../../assets/icons/github.svg";
-import Twitter from "../../assets/icons/twitter.svg";
 import Email from "../../assets/icons/email.svg";
 
 export default function Contact() {

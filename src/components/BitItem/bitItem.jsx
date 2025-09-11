@@ -1,4 +1,3 @@
-import React from "react";
 import "./bitItem.scss";
 
 function BitItem(props) {
