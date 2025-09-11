@@ -1,4 +1,4 @@
-@use "./fonts" as*;
+@use "./fonts" as *;
 
 // width dimensions
 $wrapper: 1500px;
@@ -8,16 +8,10 @@ $desktop-width: 1280px;
 // fonts variables
 $main-font-regular: "Roboto", sans-serif;
 
-// darkmode variables
-$dm-font-color: #fff;
-$dm-background-color: #000;
-
-// lightmode variables
 $lm-font-color: #000;
 $lm-background-color: #fff;
 
 // colors
-
 $modal-background: #f2f2f2;
 $input-bg: #f2f2f2;
 

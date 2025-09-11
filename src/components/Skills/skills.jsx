@@ -24,7 +24,7 @@ import { BsLightning } from "react-icons/bs";
 
 const iconSize = "24px";
 
-export default function Skills({ theme }) {
+export default function Skills() {
   return (
     <div className="skills">
       <h2 className="skills-title">Skills</h2>

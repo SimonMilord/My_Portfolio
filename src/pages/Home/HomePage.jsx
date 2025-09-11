@@ -1,5 +1,5 @@
 import "./HomePage.scss";
-import React, {useState, useEffect} from "react";
+import {useEffect} from "react";
 import Header from "../../components/Header/header";
 import Hero from "../../components/Hero/hero";
 import ProjectsList from "../../components/ProjectsList/projectsList";
@@ -10,24 +10,19 @@ import MobileNav from "../../components/MobileNav/mobileNav";
 import { Element } from "react-scroll";
 
 export default function HomePage(props) {
-  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  },[], [theme])
-
-  const handleTheme = async(value) => {
-    await setTheme(value);
-  }
+  },[])
 
   return (
     <div className="homepage">
       <Element name="header" id="header">
-        <Header theme={theme} getTheme={handleTheme} defaultTheme={props.defaultTheme}/>
+        <Header />
       </Element>
       <Hero />
       <Element name="skills" id="skills" className="section">
-        <Skills theme={theme}/>
+        <Skills />
       </Element>
       <Element name="projects" id="projects" className="section">
         <ProjectsList />
@@ -35,7 +30,7 @@ export default function HomePage(props) {
       <Element name="contact" id="contact" className="section">
         <Contact />
       </Element>
-      <Footer theme={theme}/>
+      <Footer />
       <MobileNav />
     </div>
   );
