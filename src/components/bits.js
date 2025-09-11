@@ -1,6 +1,7 @@
 import etchasketchImg from "../assets/images/etchasketch.png";
 import spacestagramImg from "../assets/images/spacestagram.png";
 import mastermindImg from "../assets/images/mastermind.png";
+import pomodoroImg from "../assets/images/pomodoro.png";
 
 const Bit = (name, img, year, demo, code, desc) => {
   const getName = () => name;
@@ -46,5 +47,15 @@ const spacestagram = Bit(
   to generate more posts.`
 );
 
-const bits = [spacestagram, etchaSketch, mastermind];
+const pomodoro = Bit(
+  "Pomodoro",
+  pomodoroImg,
+  2024,
+  "https://simonmilord.github.io/Pomodoro/",
+  "https://github.com/SimonMilord/Pomodoro",
+  `This is a small project I made to brush up on my React and Typescript skills and build a tool to help me focus while coding.
+  It was built using Typescript React and is based on the famous Pomodoro technique.`
+);
+
+const bits = [pomodoro, spacestagram, etchaSketch, mastermind];
 export default bits;

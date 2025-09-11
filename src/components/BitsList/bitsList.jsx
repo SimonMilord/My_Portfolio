@@ -23,7 +23,7 @@ function BitsList() {
     <div className="bits-box">
       <div className="bits">
         <div className="bits-top">
-          <h2 className="bits-title">Bits 🤪</h2>
+          <h2 className="bits-title">Bits</h2>
           <h3>Here's some random stuff I've created for fun</h3>
         </div>
         <ul className="bits-list">
