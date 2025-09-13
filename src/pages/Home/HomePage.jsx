@@ -1,5 +1,5 @@
 import "./HomePage.scss";
-import {useEffect} from "react";
+import { useEffect } from "react";
 import Header from "../../components/Header/header";
 import Hero from "../../components/Hero/hero";
 import ProjectsList from "../../components/ProjectsList/projectsList";
@@ -9,11 +9,10 @@ import Skills from "../../components/Skills/skills";
 import MobileNav from "../../components/MobileNav/mobileNav";
 import { Element } from "react-scroll";
 
-export default function HomePage(props) {
-
+export default function HomePage() {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  },[])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="homepage">

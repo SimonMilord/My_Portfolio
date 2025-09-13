@@ -1,47 +1,34 @@
 import "./App.scss";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import HomePage from "./pages/Home/HomePage";
 import BitsPage from "./pages/Bits/BitsPage";
 
 function App() {
+  const githubUrl = "https://github.com/SimonMilord";
+  const linkedInUrl = "https://www.linkedin.com/in/simonmilord/";
 
   return (
     <>
       <Router>
         <div className="App">
-          <Switch>
-            <Route
-              path="/"
-              exact
-              render={(routerProps) => <HomePage {...routerProps} />}
-            />
-            <Route
-              path="/bits"
-              exact
-              render={(routerProps) => <BitsPage {...routerProps} />}
-            />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/bits" element={<BitsPage />} />
             <Route
               path="/github"
-              component={() => {
-                window.location.replace("https://github.com/SimonMilord");
-                return null;
-              }}
+              element={<Navigate to={githubUrl} replace />}
             />
             <Route
               path="/linkedin"
-              component={() => {
-                window.location.replace(
-                  "https://www.linkedin.com/in/simonmilord/"
-                );
-                return null;
-              }}
+              element={<Navigate to={linkedInUrl} replace />}
             />
-            <Route
-              path="*"
-              exact
-              render={(routerProps) => <HomePage {...routerProps} />}
-            />
-          </Switch>
+            <Route path="*" element={<HomePage />} />
+          </Routes>
         </div>
       </Router>
     </>
