@@ -44,8 +44,7 @@
         cursor: pointer;
         transition: 0.3s;
         &:hover {
-          font-weight: bold;
-          font-size: 24px;
+          color: $primary-accent;
         }
       }
     }

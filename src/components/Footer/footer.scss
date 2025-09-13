@@ -8,76 +8,109 @@
   @include display-flex(row, space-between, center);
   width: 100%;
 
-  &__content {
-    @include display-flex(column, flex-end, flex-end);
+  &__left {
+    @include display-flex(column, flex-end, center);
     width: 100%;
     z-index: 999;
     height: 100%;
   }
   &__copyright {
     width: 100%;
-    margin-top: 1rem;
+    font-size: 14px;
   }
+
   &__right {
     height: 100%;
     width: 50%;
     z-index: 999;
     @include display-flex(column, flex-end, flex-end);
   }
-  &__links {
-    width: 100%;
-    margin-top: 2rem;
-  }
-  &__link {
-    margin-right: 1rem;
-    filter: invert(31%) sepia(98%) saturate(5780%) hue-rotate(230deg) brightness(94%) contrast(92%);
-    &:hover {
-      filter: invert(19%) sepia(52%) saturate(5077%) hue-rotate(246deg) brightness(107%) contrast(112%);
-    }
-  }
-  &__copyright {
-    font-size: 14px;
-  }
 
   &__topBtn {
     @include display-flex(row, center, center);
-    border-radius: 50%;
-    background-color: white;
-    border: none;
-    height: 3rem;
-    width: 3rem;
     cursor: pointer;
+  }
+
+  &__icon {
+    cursor: pointer;
+    height: 2rem;
+    filter: invert(1);
+    transition: transform 0.3s ease;
+    position: relative;
+
     &:hover {
-      transition: all 0.3s ease;
-      background-color: lightgrey;
+      transform: scale(1.2);
     }
-    .icon {
-      &:hover {
-        height: 2.5rem;
-        width: 2.5rem;
-        transition: all 0.3s ease;
-        transform: translate(0px, -5px);
+
+    // Shake animation
+    &.takeoff {
+      position: fixed !important;
+      bottom: 5rem; // Mobile default (5rem to account for mobileNav height)
+      right: 2rem; // Mobile default
+      z-index: 9999;
+      animation: rocketShake 0.5s ease-in-out,
+        rocketFlyUp 1.25s ease-in-out 0.5s forwards;
+
+      @include tablet {
+        bottom: 2rem;
+        right: 3rem;
+      }
+
+      @include desktop {
+        bottom: 3rem;
+        right: 4rem;
       }
     }
   }
-  .footer-wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
+}
 
-  .footer-wave svg {
-    position: relative;
-    display: block;
-    width: calc(150% + 1.3px);
-    height: 150px;
+// Shake effect before takeoff
+@keyframes rocketShake {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
   }
+  10% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+  20% {
+    transform: translateX(1px) rotate(1deg);
+  }
+  30% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  40% {
+    transform: translateX(2px) rotate(1deg);
+  }
+  50% {
+    transform: translateX(-1px) rotate(-0.5deg);
+  }
+  60% {
+    transform: translateX(1px) rotate(0.5deg);
+  }
+  70% {
+    transform: translateX(-1px) rotate(-0.5deg);
+  }
+  80% {
+    transform: translateX(1px) rotate(0.5deg);
+  }
+  90% {
+    transform: translateX(-1px) rotate(0deg);
+  }
+}
 
-  .footer-wave .shape-fill {
-    fill: #ffffff;
-    transition: 0.3s;
+// Flying up animation
+@keyframes rocketFlyUp {
+  0% {
+    transform: translateY(0) scale(1.2) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.5) rotate(-5deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5) rotate(-10deg);
+    opacity: 0;
   }
 }
